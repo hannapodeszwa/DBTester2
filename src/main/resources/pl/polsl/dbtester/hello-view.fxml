@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.ToggleGroup?>
+
+<VBox alignment="CENTER" prefHeight="311.0" prefWidth="352.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.polsl.dbtester.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="40.0" />
+    </padding>
+   <ComboBox fx:id="databaseComboBox" prefWidth="150.0" />
+    <fx:define>
+        <ToggleGroup fx:id="group" />
+    </fx:define>
+    <Label fx:id="welcomeText" text="Log" />
+    <Button fx:id="runButton" onAction="#runButtonClick" prefHeight="26.0" prefWidth="109.0" text="Run" />
+         <RadioButton fx:id="insertButton" mnemonicParsing="false" onAction="#insertButtonClick" prefHeight="95.0" prefWidth="113.0" selected="true" text="Insert" >
+    <toggleGroup>
+       <fx:reference source="group"/>
+   </toggleGroup>/>
+         </RadioButton>
+         <RadioButton fx:id="deleteButton" mnemonicParsing="false" onAction="#deleteButtonClick" text="Delete" disable="true">
+    <toggleGroup>
+        <fx:reference source="group"/>
+    </toggleGroup>/>
+</RadioButton>
+</VBox>

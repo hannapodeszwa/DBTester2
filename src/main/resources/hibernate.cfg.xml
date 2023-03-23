@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.url">jdbc:mysql://localhost:3306/imdb</property>
+    <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+    <property name="connection.username">root</property>
+    <property name="connection.password">mysql</property>
+    <mapping class="pl.polsl.dbtester.entity.AliasAttributesEntity"/>
+      <mapping class="pl.polsl.dbtester.entity.AliasTypesEntity"/>
+      <mapping class="pl.polsl.dbtester.entity.AliasesEntity"/>
+      <mapping class="pl.polsl.dbtester.entity.DirectorsEntity"/>
+      <mapping class="pl.polsl.dbtester.entity.EpisodeBelongsToEntity"/>
+      <mapping class="pl.polsl.dbtester.entity.HadRoleEntity"/>
+      <mapping class="pl.polsl.dbtester.entity.KnownForEntity"/>
+      <mapping class="pl.polsl.dbtester.entity.NameWorkedAsEntity"/>
+      <mapping class="pl.polsl.dbtester.entity.NamesEntity"/>
+    <mapping class="pl.polsl.dbtester.entity.PrincipalsEntity"/>
+    <mapping class="pl.polsl.dbtester.entity.TitleGenresEntity"/>
+    <mapping class="pl.polsl.dbtester.entity.TitleRatingsEntity"/>
+    <mapping class="pl.polsl.dbtester.entity.TitlesEntity"/>
+    <mapping class="pl.polsl.dbtester.entity.WritersEntity"/>
+    <!-- <property name="connection.username"/> -->
+    <!-- <property name="connection.password"/> -->
+
+    <!-- DB schema will be updated if needed -->
+    <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
+  </session-factory>
+</hibernate-configuration>
