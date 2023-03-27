@@ -7,7 +7,7 @@ import jakarta.persistence.Persistence;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
-import pl.polsl.dbtester.entity.TitlesEntity;
+import pl.polsl.dbtester.entity.*;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -34,15 +34,12 @@ public class HelloController {
     @FXML
     protected void runButtonClick() {
 
-        if(insertButton.isSelected())
-        {
-            insert();
+        if (insertButton.isSelected()) {
+            insert("1000");
 
             insertButton.setDisable(true);
             deleteButton.setDisable(false);
-        }
-        else
-        {
+        } else {
             delete();
 
             deleteButton.setDisable(true);
@@ -60,32 +57,47 @@ public class HelloController {
         welcomeText.setText("Welcome to JavaFX Application!");
     }
 
-    static List<TitlesEntity> readCsv(String fileName) {
-        List<TitlesEntity> titles = new ArrayList<>();
-        Path path = Paths.get(fileName);
 
-        try (BufferedReader br = new BufferedReader(new FileReader("data/titles.csv"))) {
+    static void readCsv(String fileName, List<TitlesEntity> titles, List<TitleGenresEntity> titleGenres, List<TitleRatingsEntity> titleRatings,
+                        List<AliasAttributesEntity> aliasAttributes, List<AliasesEntity> aliases, List<AliasTypesEntity> aliasTypes) {
+
+        // TITLES /////////////////////////////////////
+        try (BufferedReader br = new BufferedReader(new FileReader(fileName + "/Titles.tsv"))) {
             br.readLine();
             String line = br.readLine();
 
-            int i = 0;
+            while (line != null) {
 
-            while (line != null && i < 10) {
-
-                String[] attributes = line.split(";");
+                String[] attributes = line.split("\t");
 
                 TitlesEntity title = createTitleEntity(attributes);
 
                 titles.add(title);
                 line = br.readLine();
-
-                i++;
             }
 
         } catch (IOException ioe) {
             ioe.printStackTrace();
         }
-        return titles;
+
+        // GENRES /////////////////////////////////////
+        try (BufferedReader br = new BufferedReader(new FileReader(fileName + "Title_genres.tsv"))) {
+            br.readLine();
+            String line = br.readLine();
+
+            while (line != null) {
+
+                String[] attributes = line.split("\t");
+
+                TitleGenresEntity title = createTitleGenresEntity(attributes);
+
+                titleGenres.add(title);
+                line = br.readLine();
+            }
+
+        } catch (IOException ioe) {
+            ioe.printStackTrace();
+        }
     }
 
     static TitlesEntity createTitleEntity(String[] attributes) {
@@ -102,19 +114,69 @@ public class HelloController {
         return titlesEntity;
     }
 
+    static TitleRatingsEntity createTitleRatingsEntity(String[] attributes) {
+        TitleRatingsEntity titleRatingsEntity = new TitleRatingsEntity();
+        titleRatingsEntity.setTitleId(attributes[0]);
+        titleRatingsEntity.setAverageRating(toDouble(attributes[1]));
+        titleRatingsEntity.setNumVotes(toInt(attributes[2]));
+
+        return titleRatingsEntity;
+    }
+
+    static TitleGenresEntity createTitleGenresEntity(String[] attributes) {
+        TitleGenresEntity titleGenresEntity = new TitleGenresEntity();
+        titleGenresEntity.setTitleId(attributes[0]);
+        titleGenresEntity.setGenre(attributes[1]);
+
+        return titleGenresEntity;
+    }
+
+    static AliasesEntity createAliasesEntity(String[] attributes) {
+        AliasesEntity aliasesEntity = new AliasesEntity();
+        aliasesEntity.setTitleId(attributes[0]);
+        aliasesEntity.setOrdering(toInt(attributes[1]));
+        aliasesEntity.setTitle(attributes[2]);
+        aliasesEntity.setRegion(attributes[3]);
+        aliasesEntity.setLanguage(attributes[4]);
+        aliasesEntity.setIsOriginalTitle(Byte.parseByte(attributes[5]));
+
+        return aliasesEntity;
+    }
+
+    static AliasAttributesEntity createAliasAttributesEntity(String[] attributes) {
+        AliasAttributesEntity aliasAttributesEntity = new AliasAttributesEntity();
+        aliasAttributesEntity.setTitleId(attributes[0]);
+        aliasAttributesEntity.setOrdering(toInt(attributes[1]));
+        aliasAttributesEntity.setAttribute(attributes[2]);
+
+        return aliasAttributesEntity;
+    }
+
     static Integer toInt(String attribute) {
         if (attribute.equals("\\N")) return null;
         else return Integer.parseInt(attribute);
     }
 
-    static void insert()
-    {
+    static Double toDouble(String attribute) {
+        if (attribute.equals("\\N")) return null;
+        else return Double.parseDouble(attribute);
+    }
+
+    static void insert(String numberOfRows) {
         Configuration config = new Configuration().configure("hibernate.cfg.xml");
         SessionFactory sessionFactory = config.buildSessionFactory();
         Session session = sessionFactory.openSession();
 
-        String fileName = "data/titles.csv";
-        List<TitlesEntity> titles = readCsv(fileName);
+        List<TitlesEntity> titles = new ArrayList<>();
+        List<TitleGenresEntity> titleGenres = new ArrayList<>();
+        List<TitleRatingsEntity> titleRatings = new ArrayList<>();
+        List<AliasAttributesEntity> aliasAttributes = new ArrayList<>();
+        List<AliasesEntity> aliases = new ArrayList<>();
+        List<AliasTypesEntity> aliasTypes = new ArrayList<>();
+
+        //String fileName = "data/titles.csv";
+        String fileName = "data/" + numberOfRows;
+        readCsv(fileName, titles, titleGenres, titleRatings, aliasAttributes, aliases, aliasTypes);
 
         Transaction transaction = session.beginTransaction();
         try {
@@ -131,18 +193,14 @@ public class HelloController {
         }
     }
 
-    static void delete()
-    {
+    static void delete() {
         Configuration config = new Configuration().configure("hibernate.cfg.xml");
         SessionFactory sessionFactory = config.buildSessionFactory();
         Session session = sessionFactory.openSession();
 
-        String fileName = "data/titles.csv";
-        List<TitlesEntity> titles = readCsv(fileName);
-
         Transaction transaction = session.beginTransaction();
         try {
-              session.createQuery("DELETE FROM TitlesEntity").executeUpdate();
+            session.createQuery("DELETE FROM TitlesEntity").executeUpdate();
             transaction.commit();
         } finally {
             if (transaction.isActive()) {
