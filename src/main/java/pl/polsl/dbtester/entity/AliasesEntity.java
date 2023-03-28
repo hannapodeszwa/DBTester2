@@ -6,11 +6,10 @@ import jakarta.persistence.*;
 @Table(name = "aliases", schema = "imdb", catalog = "")
 @IdClass(AliasesEntityPK.class)
 public class AliasesEntity {
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     @Id
     @Column(name = "title_id")
     private String titleId;
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "ordering")
     private int ordering;

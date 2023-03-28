@@ -7,6 +7,7 @@ import jakarta.persistence.Persistence;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
+import org.hibernate.stat.Statistics;
 import pl.polsl.dbtester.entity.*;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -81,7 +82,7 @@ public class HelloController {
         }
 
         // GENRES /////////////////////////////////////
-        try (BufferedReader br = new BufferedReader(new FileReader(fileName + "Title_genres.tsv"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(fileName + "/Title_genres.tsv"))) {
             br.readLine();
             String line = br.readLine();
 
@@ -184,12 +185,17 @@ public class HelloController {
                 session.persist(t);
             }
 
+            for (TitleGenresEntity g : titleGenres) {
+                session.persist(g);
+            }
+
             transaction.commit();
         } finally {
             if (transaction.isActive()) {
                 transaction.rollback();
             }
             session.close();
+            Statistics statistics = sessionFactory.getStatistics();
         }
     }
 
@@ -200,6 +206,7 @@ public class HelloController {
 
         Transaction transaction = session.beginTransaction();
         try {
+            session.createQuery("DELETE FROM TitleGenresEntity").executeUpdate();
             session.createQuery("DELETE FROM TitlesEntity").executeUpdate();
             transaction.commit();
         } finally {

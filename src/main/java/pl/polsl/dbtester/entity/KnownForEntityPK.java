@@ -10,11 +10,9 @@ import java.io.Serializable;
 public class KnownForEntityPK implements Serializable {
     @Column(name = "name_id")
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String nameId;
     @Column(name = "title_id")
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String titleId;
 
     public String getNameId() {

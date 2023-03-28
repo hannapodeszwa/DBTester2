@@ -10,11 +10,9 @@ import java.io.Serializable;
 public class AliasTypesEntityPK implements Serializable {
     @Column(name = "title_id")
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String titleId;
     @Column(name = "ordering")
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int ordering;
 
     public String getTitleId() {

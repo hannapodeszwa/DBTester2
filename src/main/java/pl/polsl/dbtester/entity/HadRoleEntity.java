@@ -6,15 +6,12 @@ import jakarta.persistence.*;
 @Table(name = "had_role", schema = "imdb", catalog = "")
 @IdClass(HadRoleEntityPK.class)
 public class HadRoleEntity {
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "title_id")
     private String titleId;
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "name_id")
     private String nameId;
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "role_")
     private String role;

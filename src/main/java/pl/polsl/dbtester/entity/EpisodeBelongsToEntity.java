@@ -5,7 +5,6 @@ import jakarta.persistence.*;
 @Entity
 @Table(name = "episode_belongs_to", schema = "imdb", catalog = "")
 public class EpisodeBelongsToEntity {
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "episode_title_id")
     private String episodeTitleId;

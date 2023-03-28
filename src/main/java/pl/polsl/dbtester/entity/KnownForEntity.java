@@ -6,11 +6,9 @@ import jakarta.persistence.*;
 @Table(name = "known_for", schema = "imdb", catalog = "")
 @IdClass(KnownForEntityPK.class)
 public class KnownForEntity {
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "name_id")
     private String nameId;
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "title_id")
     private String titleId;

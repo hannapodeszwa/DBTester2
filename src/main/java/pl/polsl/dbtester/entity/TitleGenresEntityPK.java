@@ -10,11 +10,9 @@ import java.io.Serializable;
 public class TitleGenresEntityPK implements Serializable {
     @Column(name = "title_id")
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String titleId;
     @Column(name = "genre")
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String genre;
 
     public String getTitleId() {

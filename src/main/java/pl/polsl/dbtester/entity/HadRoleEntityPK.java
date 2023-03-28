@@ -10,15 +10,12 @@ import java.io.Serializable;
 public class HadRoleEntityPK implements Serializable {
     @Column(name = "title_id")
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String titleId;
     @Column(name = "name_id")
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String nameId;
     @Column(name = "role_")
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String role;
 
     public String getTitleId() {

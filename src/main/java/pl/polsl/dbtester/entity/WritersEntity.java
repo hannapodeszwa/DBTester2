@@ -6,11 +6,9 @@ import jakarta.persistence.*;
 @Table(name = "writers", schema = "imdb", catalog = "")
 @IdClass(WritersEntityPK.class)
 public class WritersEntity {
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "title_id")
     private String titleId;
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "name_id")
     private String nameId;
