@@ -5,6 +5,7 @@ import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.Persistence;
 import javafx.fxml.FXML;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import org.hibernate.stat.Statistics;
@@ -23,6 +24,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class HelloController {
+    private Configuration config;
+    private SessionFactory sessionFactory;
+    private Session session;
     @FXML
     private Label welcomeText;
 
@@ -30,11 +34,27 @@ public class HelloController {
     private RadioButton insertButton;
 
     @FXML
+    private ComboBox databaseComboBox;
+
+    @FXML
     private RadioButton deleteButton;
+
+    enum Database {
+        MYSQL,
+        POSTGRESQL,
+    }
+
+    @FXML
+    public void initialize() {
+        databaseComboBox.getItems().addAll(
+                Database.values()
+        );
+        databaseComboBox.getSelectionModel().selectFirst();
+    }
 
     @FXML
     protected void runButtonClick() {
-
+        changeSession();
         if (insertButton.isSelected()) {
             insert("1000");
 
@@ -59,8 +79,8 @@ public class HelloController {
     }
 
 
-    static void readCsv(String fileName, List<TitlesEntity> titles, List<TitleGenresEntity> titleGenres, List<TitleRatingsEntity> titleRatings,
-                        List<AliasAttributesEntity> aliasAttributes, List<AliasesEntity> aliases, List<AliasTypesEntity> aliasTypes) {
+    void readCsv(String fileName, List<TitlesEntity> titles, List<TitleGenresEntity> titleGenres, List<TitleRatingsEntity> titleRatings,
+                 List<AliasAttributesEntity> aliasAttributes, List<AliasesEntity> aliases, List<AliasTypesEntity> aliasTypes) {
 
         // TITLES /////////////////////////////////////
         try (BufferedReader br = new BufferedReader(new FileReader(fileName + "/Titles.tsv"))) {
@@ -101,7 +121,7 @@ public class HelloController {
         }
     }
 
-    static TitlesEntity createTitleEntity(String[] attributes) {
+    TitlesEntity createTitleEntity(String[] attributes) {
         TitlesEntity titlesEntity = new TitlesEntity();
         titlesEntity.setTitleId(attributes[0]);
         titlesEntity.setTitleType(attributes[1]);
@@ -115,7 +135,7 @@ public class HelloController {
         return titlesEntity;
     }
 
-    static TitleRatingsEntity createTitleRatingsEntity(String[] attributes) {
+    TitleRatingsEntity createTitleRatingsEntity(String[] attributes) {
         TitleRatingsEntity titleRatingsEntity = new TitleRatingsEntity();
         titleRatingsEntity.setTitleId(attributes[0]);
         titleRatingsEntity.setAverageRating(toDouble(attributes[1]));
@@ -132,7 +152,7 @@ public class HelloController {
         return titleGenresEntity;
     }
 
-    static AliasesEntity createAliasesEntity(String[] attributes) {
+    AliasesEntity createAliasesEntity(String[] attributes) {
         AliasesEntity aliasesEntity = new AliasesEntity();
         aliasesEntity.setTitleId(attributes[0]);
         aliasesEntity.setOrdering(toInt(attributes[1]));
@@ -144,7 +164,7 @@ public class HelloController {
         return aliasesEntity;
     }
 
-    static AliasAttributesEntity createAliasAttributesEntity(String[] attributes) {
+    AliasAttributesEntity createAliasAttributesEntity(String[] attributes) {
         AliasAttributesEntity aliasAttributesEntity = new AliasAttributesEntity();
         aliasAttributesEntity.setTitleId(attributes[0]);
         aliasAttributesEntity.setOrdering(toInt(attributes[1]));
@@ -153,21 +173,17 @@ public class HelloController {
         return aliasAttributesEntity;
     }
 
-    static Integer toInt(String attribute) {
+    Integer toInt(String attribute) {
         if (attribute.equals("\\N")) return null;
         else return Integer.parseInt(attribute);
     }
 
-    static Double toDouble(String attribute) {
+    Double toDouble(String attribute) {
         if (attribute.equals("\\N")) return null;
         else return Double.parseDouble(attribute);
     }
 
-    static void insert(String numberOfRows) {
-        Configuration config = new Configuration().configure("hibernate.cfg.xml");
-        SessionFactory sessionFactory = config.buildSessionFactory();
-        Session session = sessionFactory.openSession();
-
+    void insert(String numberOfRows) {
         List<TitlesEntity> titles = new ArrayList<>();
         List<TitleGenresEntity> titleGenres = new ArrayList<>();
         List<TitleRatingsEntity> titleRatings = new ArrayList<>();
@@ -199,11 +215,7 @@ public class HelloController {
         }
     }
 
-    static void delete() {
-        Configuration config = new Configuration().configure("hibernate.cfg.xml");
-        SessionFactory sessionFactory = config.buildSessionFactory();
-        Session session = sessionFactory.openSession();
-
+    void delete() {
         Transaction transaction = session.beginTransaction();
         try {
             session.createQuery("DELETE FROM TitleGenresEntity").executeUpdate();
@@ -215,5 +227,24 @@ public class HelloController {
             }
             session.close();
         }
+    }
+
+    void changeSession() {
+        Database db = Database.valueOf(databaseComboBox.getValue().toString());
+        String file = "";
+        switch (db) {
+            case MYSQL: {
+                file = "hibernate.cfg.xml";
+                break;
+            }
+            case POSTGRESQL: {
+                file = "hibernate_postgres.cfg.xml";
+                break;
+            }
+
+        }
+        config = new Configuration().configure(file);
+        sessionFactory = config.buildSessionFactory();
+        session = sessionFactory.openSession();
     }
 }
