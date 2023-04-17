@@ -12,18 +12,12 @@
       <children>
          <Label layoutX="65.0" layoutY="80.0" text="Row number:" />
          <ComboBox fx:id="databaseComboBox" layoutX="152.0" layoutY="26.0" prefWidth="150.0" />
-          <Label fx:id="welcomeText" layoutX="385.0" layoutY="265.0" text="Log" />
+          <ScrollPane layoutX="16.0" layoutY="151.0" prefHeight="135.0" prefWidth="402.0">
+          <content>
+          <Label fx:id="logLabel" layoutX="14.0" layoutY="159.0" prefHeight="129.0" prefWidth="402.0" text="Log" />
+          </content>
+          </ScrollPane>
           <Button fx:id="runButton" layoutX="16.0" layoutY="296.0" onAction="#runButtonClick" prefHeight="45.0" prefWidth="402.0" text="Run" />
-               <RadioButton fx:id="insertButton" layoutX="166.0" layoutY="171.0" mnemonicParsing="false" onAction="#insertButtonClick" prefHeight="31.0" prefWidth="102.0" selected="true" text="Insert">
-            <toggleGroup>
-               <ToggleGroup fx:id="group" />
-            </toggleGroup>/>
-               </RadioButton>
-               <RadioButton fx:id="deleteButton" disable="true" layoutX="166.0" layoutY="212.0" mnemonicParsing="false" onAction="#deleteButtonClick" prefHeight="17.0" prefWidth="70.0" text="Delete">
-          <toggleGroup>
-              <fx:reference source="group" />
-          </toggleGroup>/>
-      </RadioButton>
          <ComboBox fx:id="rowNumberComboBox" layoutX="152.0" layoutY="76.0" prefWidth="150.0" />
          <Label layoutX="74.0" layoutY="30.0" text="Database:" />
          <ComboBox fx:id="operationComboBox" layoutX="152.0" layoutY="120.0" prefWidth="150.0" />

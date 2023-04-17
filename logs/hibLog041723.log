@@ -1,0 +1,20 @@
+18:23:23.068 [JavaFX Application Thread] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version [WORKING]
+18:23:24.860 [JavaFX Application Thread] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+18:23:24.869 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+18:23:24.870 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/imdb]
+18:23:24.870 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+18:23:24.871 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+18:23:24.874 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)
+18:23:27.144 [JavaFX Application Thread] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+18:23:30.398 [JavaFX Application Thread] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener - Session Metrics {
+    1213400 nanoseconds spent acquiring 1 JDBC connections;
+    654300 nanoseconds spent releasing 1 JDBC connections;
+    244708400 nanoseconds spent preparing 2001 JDBC statements;
+    1616462600 nanoseconds spent executing 2001 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    87569100 nanoseconds spent executing 1 flushes (flushing a total of 1000 entities and 10000 collections);
+    257800 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}

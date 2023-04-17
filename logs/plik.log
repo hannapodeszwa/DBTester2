@@ -1,0 +1,761 @@
+16:21:34.084 [JavaFX Application Thread] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version [WORKING]
+16:21:35.261 [JavaFX Application Thread] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+16:21:35.267 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+16:21:35.268 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/imdb]
+16:21:35.268 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+16:21:35.268 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+16:21:35.270 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)
+16:21:37.002 [JavaFX Application Thread] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:21:38.749 [JavaFX Application Thread] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener - Session Metrics {
+    713100 nanoseconds spent acquiring 1 JDBC connections;
+    449500 nanoseconds spent releasing 1 JDBC connections;
+    187636200 nanoseconds spent preparing 2563 JDBC statements;
+    1083305300 nanoseconds spent executing 2563 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    1525791200 nanoseconds spent executing 1 flushes (flushing a total of 2563 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+16:21:38.779 [JavaFX Application Thread] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+16:21:38.779 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+16:21:38.780 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/imdb]
+16:21:38.780 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+16:21:38.780 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+16:21:38.780 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)
+16:21:39.108 [JavaFX Application Thread] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:21:39.388 [JavaFX Application Thread] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener - Session Metrics {
+    555100 nanoseconds spent acquiring 1 JDBC connections;
+    402100 nanoseconds spent releasing 1 JDBC connections;
+    207300 nanoseconds spent preparing 2 JDBC statements;
+    51658600 nanoseconds spent executing 2 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    172400 nanoseconds spent executing 2 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+16:21:39.411 [JavaFX Application Thread] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+16:21:39.412 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+16:21:39.412 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/imdb]
+16:21:39.412 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+16:21:39.412 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+16:21:39.412 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)
+16:21:39.677 [JavaFX Application Thread] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:21:40.903 [JavaFX Application Thread] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener - Session Metrics {
+    502300 nanoseconds spent acquiring 1 JDBC connections;
+    398300 nanoseconds spent releasing 1 JDBC connections;
+    113452400 nanoseconds spent preparing 2563 JDBC statements;
+    946136200 nanoseconds spent executing 2563 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    1176840000 nanoseconds spent executing 1 flushes (flushing a total of 2563 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+16:21:40.927 [JavaFX Application Thread] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+16:21:40.927 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+16:21:40.927 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/imdb]
+16:21:40.927 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+16:21:40.927 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+16:21:40.927 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)
+16:21:41.173 [JavaFX Application Thread] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:21:41.244 [JavaFX Application Thread] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener - Session Metrics {
+    375900 nanoseconds spent acquiring 1 JDBC connections;
+    358100 nanoseconds spent releasing 1 JDBC connections;
+    116300 nanoseconds spent preparing 2 JDBC statements;
+    63426000 nanoseconds spent executing 2 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    11700 nanoseconds spent executing 2 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+16:21:41.268 [JavaFX Application Thread] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+16:21:41.268 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+16:21:41.268 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/imdb]
+16:21:41.268 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+16:21:41.268 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+16:21:41.269 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)
+16:21:41.499 [JavaFX Application Thread] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:21:42.537 [JavaFX Application Thread] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener - Session Metrics {
+    478700 nanoseconds spent acquiring 1 JDBC connections;
+    279500 nanoseconds spent releasing 1 JDBC connections;
+    77207900 nanoseconds spent preparing 2563 JDBC statements;
+    814760300 nanoseconds spent executing 2563 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    985767900 nanoseconds spent executing 1 flushes (flushing a total of 2563 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+16:21:42.571 [JavaFX Application Thread] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+16:21:42.571 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+16:21:42.572 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/imdb]
+16:21:42.572 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+16:21:42.572 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+16:21:42.572 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)
+16:21:42.796 [JavaFX Application Thread] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:21:42.854 [JavaFX Application Thread] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener - Session Metrics {
+    373400 nanoseconds spent acquiring 1 JDBC connections;
+    268700 nanoseconds spent releasing 1 JDBC connections;
+    75300 nanoseconds spent preparing 2 JDBC statements;
+    50887400 nanoseconds spent executing 2 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    10000 nanoseconds spent executing 2 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+16:21:42.881 [JavaFX Application Thread] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+16:21:42.881 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+16:21:42.881 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/imdb]
+16:21:42.881 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+16:21:42.882 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+16:21:42.882 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)
+16:21:43.090 [JavaFX Application Thread] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:21:44.081 [JavaFX Application Thread] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener - Session Metrics {
+    425700 nanoseconds spent acquiring 1 JDBC connections;
+    201600 nanoseconds spent releasing 1 JDBC connections;
+    83962400 nanoseconds spent preparing 2563 JDBC statements;
+    798086500 nanoseconds spent executing 2563 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    953718000 nanoseconds spent executing 1 flushes (flushing a total of 2563 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+16:21:44.104 [JavaFX Application Thread] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+16:21:44.105 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+16:21:44.105 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/imdb]
+16:21:44.105 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+16:21:44.105 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+16:21:44.105 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)
+16:21:44.290 [JavaFX Application Thread] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:21:44.352 [JavaFX Application Thread] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener - Session Metrics {
+    412000 nanoseconds spent acquiring 1 JDBC connections;
+    313400 nanoseconds spent releasing 1 JDBC connections;
+    66400 nanoseconds spent preparing 2 JDBC statements;
+    55167600 nanoseconds spent executing 2 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    11500 nanoseconds spent executing 2 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+16:21:44.380 [JavaFX Application Thread] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+16:21:44.381 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+16:21:44.381 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/imdb]
+16:21:44.381 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+16:21:44.381 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+16:21:44.381 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)
+16:21:44.554 [JavaFX Application Thread] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:21:45.332 [JavaFX Application Thread] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener - Session Metrics {
+    627400 nanoseconds spent acquiring 1 JDBC connections;
+    247500 nanoseconds spent releasing 1 JDBC connections;
+    54978200 nanoseconds spent preparing 2563 JDBC statements;
+    632807200 nanoseconds spent executing 2563 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    734023900 nanoseconds spent executing 1 flushes (flushing a total of 2563 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+16:21:45.347 [JavaFX Application Thread] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+16:21:45.347 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+16:21:45.347 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/imdb]
+16:21:45.347 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+16:21:45.347 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+16:21:45.347 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)
+16:21:45.493 [JavaFX Application Thread] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:21:45.552 [JavaFX Application Thread] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener - Session Metrics {
+    382900 nanoseconds spent acquiring 1 JDBC connections;
+    276600 nanoseconds spent releasing 1 JDBC connections;
+    50700 nanoseconds spent preparing 2 JDBC statements;
+    51681100 nanoseconds spent executing 2 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    12500 nanoseconds spent executing 2 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+16:21:45.568 [JavaFX Application Thread] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+16:21:45.569 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+16:21:45.569 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/imdb]
+16:21:45.569 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+16:21:45.569 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+16:21:45.569 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)
+16:21:45.710 [JavaFX Application Thread] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:21:46.524 [JavaFX Application Thread] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener - Session Metrics {
+    426100 nanoseconds spent acquiring 1 JDBC connections;
+    210400 nanoseconds spent releasing 1 JDBC connections;
+    52148400 nanoseconds spent preparing 2563 JDBC statements;
+    685801900 nanoseconds spent executing 2563 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    783275300 nanoseconds spent executing 1 flushes (flushing a total of 2563 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+16:21:46.539 [JavaFX Application Thread] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+16:21:46.539 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+16:21:46.540 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/imdb]
+16:21:46.540 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+16:21:46.540 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+16:21:46.540 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)
+16:21:46.693 [JavaFX Application Thread] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:21:46.777 [JavaFX Application Thread] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener - Session Metrics {
+    399800 nanoseconds spent acquiring 1 JDBC connections;
+    305400 nanoseconds spent releasing 1 JDBC connections;
+    51000 nanoseconds spent preparing 2 JDBC statements;
+    75196100 nanoseconds spent executing 2 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    11600 nanoseconds spent executing 2 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+16:21:46.800 [JavaFX Application Thread] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+16:21:46.800 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+16:21:46.800 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/imdb]
+16:21:46.800 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+16:21:46.801 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+16:21:46.801 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)
+16:21:46.987 [JavaFX Application Thread] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:21:47.844 [JavaFX Application Thread] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener - Session Metrics {
+    455300 nanoseconds spent acquiring 1 JDBC connections;
+    186500 nanoseconds spent releasing 1 JDBC connections;
+    56575400 nanoseconds spent preparing 2563 JDBC statements;
+    724038100 nanoseconds spent executing 2563 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    830875200 nanoseconds spent executing 1 flushes (flushing a total of 2563 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+16:21:47.858 [JavaFX Application Thread] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+16:21:47.858 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+16:21:47.858 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/imdb]
+16:21:47.858 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+16:21:47.859 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+16:21:47.859 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)
+16:21:47.977 [JavaFX Application Thread] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:21:48.077 [JavaFX Application Thread] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener - Session Metrics {
+    455300 nanoseconds spent acquiring 1 JDBC connections;
+    278200 nanoseconds spent releasing 1 JDBC connections;
+    63900 nanoseconds spent preparing 2 JDBC statements;
+    92099300 nanoseconds spent executing 2 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    14800 nanoseconds spent executing 2 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+16:21:48.098 [JavaFX Application Thread] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+16:21:48.099 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+16:21:48.099 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/imdb]
+16:21:48.099 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+16:21:48.099 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+16:21:48.099 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)
+16:21:48.271 [JavaFX Application Thread] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:21:49.055 [JavaFX Application Thread] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener - Session Metrics {
+    407500 nanoseconds spent acquiring 1 JDBC connections;
+    374200 nanoseconds spent releasing 1 JDBC connections;
+    56144600 nanoseconds spent preparing 2563 JDBC statements;
+    661322100 nanoseconds spent executing 2563 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    760162300 nanoseconds spent executing 1 flushes (flushing a total of 2563 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+16:21:49.080 [JavaFX Application Thread] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+16:21:49.081 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+16:21:49.081 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/imdb]
+16:21:49.082 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+16:21:49.082 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+16:21:49.082 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)
+16:21:49.228 [JavaFX Application Thread] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:21:49.287 [JavaFX Application Thread] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener - Session Metrics {
+    330300 nanoseconds spent acquiring 1 JDBC connections;
+    249400 nanoseconds spent releasing 1 JDBC connections;
+    48500 nanoseconds spent preparing 2 JDBC statements;
+    53910800 nanoseconds spent executing 2 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    11100 nanoseconds spent executing 2 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+16:21:49.310 [JavaFX Application Thread] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+16:21:49.311 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+16:21:49.311 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/imdb]
+16:21:49.311 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+16:21:49.311 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+16:21:49.311 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)
+16:21:49.499 [JavaFX Application Thread] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:21:50.233 [JavaFX Application Thread] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener - Session Metrics {
+    392400 nanoseconds spent acquiring 1 JDBC connections;
+    233100 nanoseconds spent releasing 1 JDBC connections;
+    53718300 nanoseconds spent preparing 2563 JDBC statements;
+    619073300 nanoseconds spent executing 2563 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    711500100 nanoseconds spent executing 1 flushes (flushing a total of 2563 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+16:21:50.250 [JavaFX Application Thread] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+16:21:50.250 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+16:21:50.250 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/imdb]
+16:21:50.250 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+16:21:50.250 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+16:21:50.250 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)
+16:21:50.385 [JavaFX Application Thread] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:21:50.459 [JavaFX Application Thread] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener - Session Metrics {
+    399900 nanoseconds spent acquiring 1 JDBC connections;
+    201000 nanoseconds spent releasing 1 JDBC connections;
+    47100 nanoseconds spent preparing 2 JDBC statements;
+    66997100 nanoseconds spent executing 2 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    12600 nanoseconds spent executing 2 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+16:21:50.472 [JavaFX Application Thread] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+16:21:50.473 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+16:21:50.473 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/imdb]
+16:21:50.473 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+16:21:50.473 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+16:21:50.473 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)
+16:21:50.690 [JavaFX Application Thread] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:21:51.411 [JavaFX Application Thread] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener - Session Metrics {
+    469500 nanoseconds spent acquiring 1 JDBC connections;
+    278100 nanoseconds spent releasing 1 JDBC connections;
+    50045200 nanoseconds spent preparing 2563 JDBC statements;
+    601714200 nanoseconds spent executing 2563 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    691199200 nanoseconds spent executing 1 flushes (flushing a total of 2563 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+16:21:51.429 [JavaFX Application Thread] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+16:21:51.430 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+16:21:51.430 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/imdb]
+16:21:51.430 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+16:21:51.430 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+16:21:51.430 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)
+16:21:51.580 [JavaFX Application Thread] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:21:51.688 [JavaFX Application Thread] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener - Session Metrics {
+    422600 nanoseconds spent acquiring 1 JDBC connections;
+    318200 nanoseconds spent releasing 1 JDBC connections;
+    63800 nanoseconds spent preparing 2 JDBC statements;
+    99068900 nanoseconds spent executing 2 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    14700 nanoseconds spent executing 2 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+16:21:51.712 [JavaFX Application Thread] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+16:21:51.712 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+16:21:51.713 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/imdb]
+16:21:51.713 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+16:21:51.713 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+16:21:51.713 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)
+16:21:51.871 [JavaFX Application Thread] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:21:52.553 [JavaFX Application Thread] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener - Session Metrics {
+    342500 nanoseconds spent acquiring 1 JDBC connections;
+    187000 nanoseconds spent releasing 1 JDBC connections;
+    46606800 nanoseconds spent preparing 2563 JDBC statements;
+    583122700 nanoseconds spent executing 2563 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    660538200 nanoseconds spent executing 1 flushes (flushing a total of 2563 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+16:21:52.565 [JavaFX Application Thread] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+16:21:52.565 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+16:21:52.565 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/imdb]
+16:21:52.565 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+16:21:52.565 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+16:21:52.565 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)
+16:21:52.666 [JavaFX Application Thread] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:21:52.741 [JavaFX Application Thread] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener - Session Metrics {
+    379100 nanoseconds spent acquiring 1 JDBC connections;
+    252300 nanoseconds spent releasing 1 JDBC connections;
+    52700 nanoseconds spent preparing 2 JDBC statements;
+    68797500 nanoseconds spent executing 2 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    11400 nanoseconds spent executing 2 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+16:21:52.758 [JavaFX Application Thread] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+16:21:52.759 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+16:21:52.759 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/imdb]
+16:21:52.759 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+16:21:52.759 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+16:21:52.759 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)
+16:21:52.910 [JavaFX Application Thread] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:21:53.709 [JavaFX Application Thread] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener - Session Metrics {
+    382700 nanoseconds spent acquiring 1 JDBC connections;
+    202300 nanoseconds spent releasing 1 JDBC connections;
+    53489800 nanoseconds spent preparing 2563 JDBC statements;
+    680595300 nanoseconds spent executing 2563 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    778039400 nanoseconds spent executing 1 flushes (flushing a total of 2563 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+16:21:53.727 [JavaFX Application Thread] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+16:21:53.728 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+16:21:53.728 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/imdb]
+16:21:53.728 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+16:21:53.728 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+16:21:53.729 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)
+16:21:53.858 [JavaFX Application Thread] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:21:53.953 [JavaFX Application Thread] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener - Session Metrics {
+    377800 nanoseconds spent acquiring 1 JDBC connections;
+    272300 nanoseconds spent releasing 1 JDBC connections;
+    49200 nanoseconds spent preparing 2 JDBC statements;
+    87406400 nanoseconds spent executing 2 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    11800 nanoseconds spent executing 2 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+16:21:53.975 [JavaFX Application Thread] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+16:21:53.975 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+16:21:53.975 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/imdb]
+16:21:53.975 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+16:21:53.975 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+16:21:53.976 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)
+16:21:54.167 [JavaFX Application Thread] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:21:54.921 [JavaFX Application Thread] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener - Session Metrics {
+    355600 nanoseconds spent acquiring 1 JDBC connections;
+    197400 nanoseconds spent releasing 1 JDBC connections;
+    48725400 nanoseconds spent preparing 2563 JDBC statements;
+    643644400 nanoseconds spent executing 2563 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    731671800 nanoseconds spent executing 1 flushes (flushing a total of 2563 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+16:21:54.937 [JavaFX Application Thread] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+16:21:54.938 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+16:21:54.938 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/imdb]
+16:21:54.938 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+16:21:54.938 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+16:21:54.938 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)
+16:21:55.078 [JavaFX Application Thread] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:21:55.188 [JavaFX Application Thread] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener - Session Metrics {
+    339400 nanoseconds spent acquiring 1 JDBC connections;
+    352000 nanoseconds spent releasing 1 JDBC connections;
+    62700 nanoseconds spent preparing 2 JDBC statements;
+    102484400 nanoseconds spent executing 2 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    13000 nanoseconds spent executing 2 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+16:21:55.212 [JavaFX Application Thread] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+16:21:55.213 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+16:21:55.213 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/imdb]
+16:21:55.213 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+16:21:55.213 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+16:21:55.213 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)
+16:21:55.359 [JavaFX Application Thread] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:21:56.034 [JavaFX Application Thread] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener - Session Metrics {
+    335000 nanoseconds spent acquiring 1 JDBC connections;
+    193600 nanoseconds spent releasing 1 JDBC connections;
+    41784000 nanoseconds spent preparing 2563 JDBC statements;
+    579319500 nanoseconds spent executing 2563 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    651236700 nanoseconds spent executing 1 flushes (flushing a total of 2563 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+16:21:56.046 [JavaFX Application Thread] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+16:21:56.046 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+16:21:56.046 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/imdb]
+16:21:56.046 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+16:21:56.046 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+16:21:56.046 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)
+16:21:56.169 [JavaFX Application Thread] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:21:56.273 [JavaFX Application Thread] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener - Session Metrics {
+    366900 nanoseconds spent acquiring 1 JDBC connections;
+    356900 nanoseconds spent releasing 1 JDBC connections;
+    56200 nanoseconds spent preparing 2 JDBC statements;
+    98319800 nanoseconds spent executing 2 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    13100 nanoseconds spent executing 2 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+16:21:56.297 [JavaFX Application Thread] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+16:21:56.297 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+16:21:56.297 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/imdb]
+16:21:56.297 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+16:21:56.297 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+16:21:56.298 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)
+16:21:56.445 [JavaFX Application Thread] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:21:57.103 [JavaFX Application Thread] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener - Session Metrics {
+    356100 nanoseconds spent acquiring 1 JDBC connections;
+    244800 nanoseconds spent releasing 1 JDBC connections;
+    40988300 nanoseconds spent preparing 2563 JDBC statements;
+    568829700 nanoseconds spent executing 2563 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    639581500 nanoseconds spent executing 1 flushes (flushing a total of 2563 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+16:21:57.116 [JavaFX Application Thread] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+16:21:57.116 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+16:21:57.116 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/imdb]
+16:21:57.117 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+16:21:57.117 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+16:21:57.117 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)
+16:21:57.203 [JavaFX Application Thread] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:21:57.265 [JavaFX Application Thread] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener - Session Metrics {
+    400700 nanoseconds spent acquiring 1 JDBC connections;
+    327600 nanoseconds spent releasing 1 JDBC connections;
+    47900 nanoseconds spent preparing 2 JDBC statements;
+    55173600 nanoseconds spent executing 2 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    11700 nanoseconds spent executing 2 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+16:21:57.282 [JavaFX Application Thread] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+16:21:57.282 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+16:21:57.282 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/imdb]
+16:21:57.282 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+16:21:57.282 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+16:21:57.282 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)
+16:21:57.478 [JavaFX Application Thread] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:21:58.272 [JavaFX Application Thread] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener - Session Metrics {
+    836000 nanoseconds spent acquiring 1 JDBC connections;
+    196900 nanoseconds spent releasing 1 JDBC connections;
+    56026000 nanoseconds spent preparing 2563 JDBC statements;
+    658128700 nanoseconds spent executing 2563 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    759546600 nanoseconds spent executing 1 flushes (flushing a total of 2563 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+16:21:58.287 [JavaFX Application Thread] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+16:21:58.287 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+16:21:58.287 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/imdb]
+16:21:58.287 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+16:21:58.288 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+16:21:58.288 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)
+16:21:58.387 [JavaFX Application Thread] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:21:58.469 [JavaFX Application Thread] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener - Session Metrics {
+    359000 nanoseconds spent acquiring 1 JDBC connections;
+    331400 nanoseconds spent releasing 1 JDBC connections;
+    42700 nanoseconds spent preparing 2 JDBC statements;
+    74369900 nanoseconds spent executing 2 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    9500 nanoseconds spent executing 2 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+16:21:58.486 [JavaFX Application Thread] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+16:21:58.487 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+16:21:58.487 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/imdb]
+16:21:58.487 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+16:21:58.487 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+16:21:58.488 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)
+16:21:58.591 [JavaFX Application Thread] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:21:59.332 [JavaFX Application Thread] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener - Session Metrics {
+    378100 nanoseconds spent acquiring 1 JDBC connections;
+    268400 nanoseconds spent releasing 1 JDBC connections;
+    49659200 nanoseconds spent preparing 2563 JDBC statements;
+    635036400 nanoseconds spent executing 2563 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    718921200 nanoseconds spent executing 1 flushes (flushing a total of 2563 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+16:21:59.346 [JavaFX Application Thread] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+16:21:59.346 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+16:21:59.346 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/imdb]
+16:21:59.346 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+16:21:59.346 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+16:21:59.346 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)
+16:21:59.446 [JavaFX Application Thread] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:21:59.508 [JavaFX Application Thread] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener - Session Metrics {
+    325000 nanoseconds spent acquiring 1 JDBC connections;
+    235700 nanoseconds spent releasing 1 JDBC connections;
+    49800 nanoseconds spent preparing 2 JDBC statements;
+    56649600 nanoseconds spent executing 2 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    10700 nanoseconds spent executing 2 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+16:21:59.522 [JavaFX Application Thread] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+16:21:59.522 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+16:21:59.522 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/imdb]
+16:21:59.523 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+16:21:59.523 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+16:21:59.523 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)
+16:21:59.661 [JavaFX Application Thread] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:22:00.589 [JavaFX Application Thread] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener - Session Metrics {
+    535700 nanoseconds spent acquiring 1 JDBC connections;
+    211000 nanoseconds spent releasing 1 JDBC connections;
+    72432800 nanoseconds spent preparing 2563 JDBC statements;
+    783155800 nanoseconds spent executing 2563 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    898853800 nanoseconds spent executing 1 flushes (flushing a total of 2563 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+16:22:00.602 [JavaFX Application Thread] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+16:22:00.602 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+16:22:00.602 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/imdb]
+16:22:00.602 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+16:22:00.602 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+16:22:00.602 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)
+16:22:00.707 [JavaFX Application Thread] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:22:00.814 [JavaFX Application Thread] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener - Session Metrics {
+    426000 nanoseconds spent acquiring 1 JDBC connections;
+    339200 nanoseconds spent releasing 1 JDBC connections;
+    80400 nanoseconds spent preparing 2 JDBC statements;
+    97939400 nanoseconds spent executing 2 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    13700 nanoseconds spent executing 2 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+16:22:00.834 [JavaFX Application Thread] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+16:22:00.835 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+16:22:00.835 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/imdb]
+16:22:00.835 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+16:22:00.835 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+16:22:00.835 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)
+16:22:01.014 [JavaFX Application Thread] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:22:01.812 [JavaFX Application Thread] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener - Session Metrics {
+    494100 nanoseconds spent acquiring 1 JDBC connections;
+    277200 nanoseconds spent releasing 1 JDBC connections;
+    50242200 nanoseconds spent preparing 2563 JDBC statements;
+    684478600 nanoseconds spent executing 2563 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    771558700 nanoseconds spent executing 1 flushes (flushing a total of 2563 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+16:22:01.831 [JavaFX Application Thread] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+16:22:01.831 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+16:22:01.831 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/imdb]
+16:22:01.831 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+16:22:01.831 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+16:22:01.831 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)
+16:22:01.956 [JavaFX Application Thread] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:22:02.050 [JavaFX Application Thread] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener - Session Metrics {
+    459500 nanoseconds spent acquiring 1 JDBC connections;
+    252400 nanoseconds spent releasing 1 JDBC connections;
+    62700 nanoseconds spent preparing 2 JDBC statements;
+    87079400 nanoseconds spent executing 2 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    13400 nanoseconds spent executing 2 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+16:22:02.064 [JavaFX Application Thread] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+16:22:02.064 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+16:22:02.064 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/imdb]
+16:22:02.064 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+16:22:02.064 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+16:22:02.064 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)
+16:22:02.168 [JavaFX Application Thread] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:22:02.957 [JavaFX Application Thread] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener - Session Metrics {
+    473300 nanoseconds spent acquiring 1 JDBC connections;
+    325200 nanoseconds spent releasing 1 JDBC connections;
+    64955500 nanoseconds spent preparing 2563 JDBC statements;
+    661090800 nanoseconds spent executing 2563 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    760785500 nanoseconds spent executing 1 flushes (flushing a total of 2563 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+16:22:02.973 [JavaFX Application Thread] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+16:22:02.973 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+16:22:02.973 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/imdb]
+16:22:02.973 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+16:22:02.973 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+16:22:02.974 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)
+16:22:03.125 [JavaFX Application Thread] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:22:03.202 [JavaFX Application Thread] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener - Session Metrics {
+    422700 nanoseconds spent acquiring 1 JDBC connections;
+    233500 nanoseconds spent releasing 1 JDBC connections;
+    62500 nanoseconds spent preparing 2 JDBC statements;
+    68267600 nanoseconds spent executing 2 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    15100 nanoseconds spent executing 2 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
