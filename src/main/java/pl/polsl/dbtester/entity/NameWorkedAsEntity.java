@@ -1,6 +1,7 @@
 package pl.polsl.dbtester.entity;
 
-import jakarta.persistence.*;
+//import jakarta.persistence.*;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "name_worked_as", schema = "imdb", catalog = "")

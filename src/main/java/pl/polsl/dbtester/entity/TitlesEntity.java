@@ -1,6 +1,7 @@
 package pl.polsl.dbtester.entity;
 
-import jakarta.persistence.*;
+//import jakarta.persistence.*;
+import javax.persistence.*;
 
 import java.util.Collection;
 
@@ -21,7 +22,7 @@ public class TitlesEntity {
     private String originalTitle;
     @Basic
     @Column(name = "is_adult")
-    private Byte isAdult;
+    private Boolean isAdult;
     @Basic
     @Column(name = "start_year")
     private Integer startYear;
@@ -88,11 +89,11 @@ public class TitlesEntity {
         this.originalTitle = originalTitle;
     }
 
-    public Byte getIsAdult() {
+    public Boolean getIsAdult() {
         return isAdult;
     }
 
-    public void setIsAdult(Byte isAdult) {
+    public void setIsAdult(Boolean isAdult) {
         this.isAdult = isAdult;
     }
 

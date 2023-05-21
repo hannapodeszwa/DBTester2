@@ -9,7 +9,7 @@ public class Mapper {
         titlesEntity.setTitleType(attributes[1]);
         titlesEntity.setPrimaryTitle(attributes[2]);
         titlesEntity.setOriginalTitle(attributes[3]);
-        titlesEntity.setIsAdult(Byte.parseByte(attributes[4]));
+        titlesEntity.setIsAdult(Boolean.parseBoolean(attributes[4]));
         titlesEntity.setStartYear(toInt(attributes[5]));
         titlesEntity.setEndYear(toInt(attributes[6]));
         titlesEntity.setRuntimeMinutes(toInt(attributes[7]));

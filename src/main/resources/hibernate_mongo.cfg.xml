@@ -4,13 +4,15 @@
         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <session-factory>
-        <property name="hibernate.archive.autodetection">class, hbm</property>
 
         <property name="hibernate.generate_statistics">true</property>
-        <property name="connection.url">jdbc:mysql://localhost:3306/imdb</property>
-        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-        <property name="connection.username">root</property>
-        <property name="connection.password">mysql</property>
+        <property name="hibernate.ogm.datastore.provider">mongodb</property>
+        <property name="hibernate.ogm.datastore.database">imdb</property>
+        <property name="hibernate.ogm.datastore.host">127.0.0.1</property>
+        <property name="hibernate.ogm.datastore.port">27017</property>
+        <property name="hibernate.ogm.datastore.create_database">true</property>
+
+
         <mapping class="pl.polsl.dbtester.entity.AliasAttributesEntity"/>
         <mapping class="pl.polsl.dbtester.entity.AliasTypesEntity"/>
         <mapping class="pl.polsl.dbtester.entity.AliasesEntity"/>
@@ -25,10 +27,5 @@
         <mapping class="pl.polsl.dbtester.entity.TitleRatingsEntity"/>
         <mapping class="pl.polsl.dbtester.entity.TitlesEntity"/>
         <mapping class="pl.polsl.dbtester.entity.WritersEntity"/>
-        <!-- <property name="connection.username"/> -->
-        <!-- <property name="connection.password"/> -->
-
-        <!-- DB schema will be updated if needed -->
-        <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
     </session-factory>
 </hibernate-configuration>

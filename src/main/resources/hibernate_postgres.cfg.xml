@@ -5,10 +5,10 @@
 <hibernate-configuration>
   <session-factory>
     <property name="hibernate.generate_statistics">true</property>
-    <property name="connection.url">jdbc:postgresql://localhost:5435/imdb</property>
+    <property name="connection.url">jdbc:postgresql://localhost:5432/imdb</property>
     <property name="connection.driver_class">org.postgresql.Driver</property>
     <property name="connection.username">postgres</property>
-<!--    <property name="connection.password">postgres</property>-->
+    <property name="connection.password">postgres</property>
     <mapping class="pl.polsl.dbtester.entity.AliasAttributesEntity"/>
       <mapping class="pl.polsl.dbtester.entity.AliasTypesEntity"/>
       <mapping class="pl.polsl.dbtester.entity.AliasesEntity"/>

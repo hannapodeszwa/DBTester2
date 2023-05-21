@@ -18,6 +18,7 @@ import java.util.List;
 
 public class HelloController {
 
+    private int numberOfIternations = 20;
     private CsvReader reader = new CsvReader();
     private Configuration config;
     private SessionFactory sessionFactory;
@@ -37,6 +38,7 @@ public class HelloController {
     enum Database {
         MYSQL,
         POSTGRESQL,
+        MONGODB
     }
 
     enum Operation {
@@ -119,7 +121,7 @@ public class HelloController {
     }
 
     void insertDelete(String numberOfRows) {
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < numberOfIternations; i++) {
             changeSession();
             insert(numberOfRows);
             changeSession();
@@ -208,8 +210,8 @@ public class HelloController {
         try {
             startTime = System.currentTimeMillis();
             session.createQuery("DELETE FROM TitleGenresEntity").executeUpdate();
-            session.createQuery("DELETE FROM TitlesEntity").executeUpdate();
             session.createQuery("DELETE FROM TitleRatingsEntity ").executeUpdate();
+            session.createQuery("DELETE FROM TitlesEntity").executeUpdate();
 
             transaction.commit();
             endTime = System.currentTimeMillis();
@@ -233,6 +235,10 @@ public class HelloController {
             }
             case POSTGRESQL: {
                 file = "hibernate_postgres.cfg.xml";
+                break;
+            }
+            case MONGODB: {
+                file = "hibernate_mongo.cfg.xml";
                 break;
             }
 
