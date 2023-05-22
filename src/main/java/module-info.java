@@ -12,6 +12,7 @@ module pl.polsl.dbtester {
     requires org.apache.logging.log4j;
     requires org.apache.logging.log4j.core;
     requires java.persistence;
+//    requires hibernate.jpa;
 
 
     opens pl.polsl.dbtester to javafx.fxml, org.hibernate.orm.core;

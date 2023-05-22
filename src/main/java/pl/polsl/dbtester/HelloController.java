@@ -66,7 +66,7 @@ public class HelloController {
         );
 
         operationComboBox.getSelectionModel().selectFirst();
-        operationComboBox.getItems().remove(Operation.delete);
+       // operationComboBox.getItems().remove(Operation.delete);
     }
 
     @FXML
@@ -172,8 +172,8 @@ public class HelloController {
         Transaction transaction = session.beginTransaction();
         try {
             session.update("UPDATE FROM TitleGenresEntity");
-            session.createQuery("DELETE FROM TitleGenresEntity").executeUpdate();
-            session.createQuery("DELETE FROM TitlesEntity").executeUpdate();
+            session.createQuery("DELETE FROM pl.polsl.dbtester.entity.TitleGenresEntity").executeUpdate();
+            session.createQuery("DELETE FROM pl.polsl.dbtester.entity.TitlesEntity").executeUpdate();
             transaction.commit();
         } finally {
             if (transaction.isActive()) {
@@ -190,7 +190,7 @@ public class HelloController {
         try {
             startTime = System.currentTimeMillis();
             // session.createQuery("SELECT t FROM TitlesEntity t");
-            session.createQuery("SELECT t FROM TitlesEntity t", TitlesEntity.class).getResultList();
+            session.createQuery("SELECT t FROM pl.polsl.dbtester.entity.TitlesEntity t", TitlesEntity.class).getResultList();
             transaction.commit();
             endTime = System.currentTimeMillis();
         } finally {
@@ -208,11 +208,19 @@ public class HelloController {
         long endTime = 0L;
         Transaction transaction = session.beginTransaction();
         try {
-            startTime = System.currentTimeMillis();
-            session.createQuery("DELETE FROM TitleGenresEntity").executeUpdate();
-            session.createQuery("DELETE FROM TitleRatingsEntity ").executeUpdate();
-            session.createQuery("DELETE FROM TitlesEntity").executeUpdate();
-
+            if(databaseComboBox.getValue().equals(Database.MONGODB))
+            {
+                startTime = System.currentTimeMillis();
+                session.createNativeQuery("db.imdb.title_genres.remove({})").executeUpdate();
+                session.createNativeQuery("db.imdb.titles.remove({})").executeUpdate();
+                //session.createNativeQuery("db.imdb.title_genres.remove({})").executeUpdate();
+            }
+            else {
+                startTime = System.currentTimeMillis();
+                session.createQuery("DELETE FROM pl.polsl.dbtester.entity.TitleGenresEntity").executeUpdate();
+                session.createQuery("DELETE FROM pl.polsl.dbtester.entity.TitleRatingsEntity ").executeUpdate();
+                session.createQuery("DELETE FROM pl.polsl.dbtester.entity.TitlesEntity").executeUpdate();
+            }
             transaction.commit();
             endTime = System.currentTimeMillis();
         } finally {
