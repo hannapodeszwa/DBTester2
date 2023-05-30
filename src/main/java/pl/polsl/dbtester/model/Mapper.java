@@ -55,6 +55,15 @@ public class Mapper {
         return aliasAttributesEntity;
     }
 
+    public AliasTypesEntity createAliasTypesEntity(String[] attributes) {
+        AliasTypesEntity aliasTypesEntity = new AliasTypesEntity();
+        aliasTypesEntity.setTitleId(attributes[0]);
+        aliasTypesEntity.setOrdering(toInt(attributes[1]));
+        aliasTypesEntity.setType(attributes[2]);
+
+        return aliasTypesEntity;
+    }
+
     Integer toInt(String attribute) {
         if (attribute.equals("\\N")) return null;
         else return Integer.parseInt(attribute);

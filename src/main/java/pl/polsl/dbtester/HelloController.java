@@ -66,7 +66,7 @@ public class HelloController {
         );
 
         operationComboBox.getSelectionModel().selectFirst();
-       // operationComboBox.getItems().remove(Operation.delete);
+        // operationComboBox.getItems().remove(Operation.delete);
     }
 
     @FXML
@@ -133,26 +133,70 @@ public class HelloController {
         long startTime = 0L;
         long endTime = 0L;
 
-        List<TitlesEntity> titles = new ArrayList<>();
+        List<AliasAttributesEntity> aliasAttributes = new ArrayList<>();
+        List<AliasTypesEntity> aliasTypes = new ArrayList<>();
+        List<AliasesEntity> aliases = new ArrayList<>();
+        List<DirectorsEntity> directors = new ArrayList<>();
+        List<EpisodeBelongsToEntity> episodeBelongsTo = new ArrayList<>();
+        List<HadRoleEntity> hadRole = new ArrayList<>();
+        List<KnownForEntity> knownFor = new ArrayList<>();
+        List<NameWorkedAsEntity> nameWorkedAs = new ArrayList<>();
+        List<NamesEntity> names = new ArrayList<>();
+        List<PrincipalsEntity> principals = new ArrayList<>();
         List<TitleGenresEntity> titleGenres = new ArrayList<>();
         List<TitleRatingsEntity> titleRatings = new ArrayList<>();
-        List<AliasAttributesEntity> aliasAttributes = new ArrayList<>();
-        List<AliasesEntity> aliases = new ArrayList<>();
-        List<AliasTypesEntity> aliasTypes = new ArrayList<>();
+        List<TitlesEntity> titles = new ArrayList<>();
+        List<WritersEntity> writers = new ArrayList<>();
 
         String fileName = "data/" + numberOfRows;
-        reader.readCsv(fileName, titles, titleGenres, titleRatings, aliasAttributes, aliases, aliasTypes);
+        reader.readCsv(fileName, aliasAttributes, aliasTypes, aliases, directors, episodeBelongsTo, hadRole, knownFor, nameWorkedAs,
+                names, principals, titleGenres, titleRatings, titles, writers);
 
         Transaction transaction = session.beginTransaction();
         try {
             startTime = System.currentTimeMillis();
 
+            for (AliasAttributesEntity l : aliasAttributes) {
+                session.persist(l);
+            }
+            for (AliasTypesEntity l : aliasTypes) {
+                session.persist(l);
+            }
+            for (AliasesEntity l : aliases) {
+                session.persist(l);
+            }
+            for (DirectorsEntity l : directors) {
+                session.persist(l);
+            }
+            for (EpisodeBelongsToEntity l : episodeBelongsTo) {
+                session.persist(l);
+            }
+            for (HadRoleEntity l : hadRole) {
+                session.persist(l);
+            }
+            for (KnownForEntity l : knownFor) {
+                session.persist(l);
+            }
+            for (NameWorkedAsEntity l : nameWorkedAs) {
+                session.persist(l);
+            }
+            for (NamesEntity l : names) {
+                session.persist(l);
+            }
+            for (PrincipalsEntity l : principals) {
+                session.persist(l);
+            }
+            for (TitleGenresEntity g : titleGenres) {
+                session.persist(g);
+            }
+            for (TitleRatingsEntity l : titleRatings) {
+                session.persist(l);
+            }
             for (TitlesEntity t : titles) {
                 session.persist(t);
             }
-
-            for (TitleGenresEntity g : titleGenres) {
-                session.persist(g);
+            for (WritersEntity l : writers) {
+                session.persist(l);
             }
 
             transaction.commit();
@@ -208,14 +252,12 @@ public class HelloController {
         long endTime = 0L;
         Transaction transaction = session.beginTransaction();
         try {
-            if(databaseComboBox.getValue().equals(Database.MONGODB))
-            {
+            if (databaseComboBox.getValue().equals(Database.MONGODB)) {
                 startTime = System.currentTimeMillis();
                 session.createNativeQuery("db.imdb.title_genres.remove({})").executeUpdate();
                 session.createNativeQuery("db.imdb.titles.remove({})").executeUpdate();
                 //session.createNativeQuery("db.imdb.title_genres.remove({})").executeUpdate();
-            }
-            else {
+            } else {
                 startTime = System.currentTimeMillis();
                 session.createQuery("DELETE FROM pl.polsl.dbtester.entity.TitleGenresEntity").executeUpdate();
                 session.createQuery("DELETE FROM pl.polsl.dbtester.entity.TitleRatingsEntity ").executeUpdate();
@@ -270,8 +312,7 @@ public class HelloController {
         }
     }
 
-    void clearFile()
-    {
+    void clearFile() {
         LocalDateTime now = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMddmm");
         String date = now.format(formatter);

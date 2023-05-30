@@ -10,13 +10,72 @@ import java.util.List;
 public class CsvReader {
     private Mapper mapper = new Mapper();
 
-    public void readCsv(String fileName, List<TitlesEntity> titles, List<TitleGenresEntity> titleGenres, List<TitleRatingsEntity> titleRatings,
-                        List<AliasAttributesEntity> aliasAttributes, List<AliasesEntity> aliases, List<AliasTypesEntity> aliasTypes) {
+    public void readCsv(String fileName,
+                        List<AliasAttributesEntity> aliasAttributes,
+                        List<AliasTypesEntity> aliasTypes,
+                        List<AliasesEntity> aliases,
+                        List<DirectorsEntity> directors,
+                        List<EpisodeBelongsToEntity> episodeBelongsTo,
+                        List<HadRoleEntity> hadRole,
+                        List<KnownForEntity> knownFor,
+                        List<NameWorkedAsEntity> nameWorkedAs,
+                        List<NamesEntity> names,
+                        List<PrincipalsEntity> principals,
+                        List<TitleGenresEntity> titleGenres,
+                        List<TitleRatingsEntity> titleRatings,
+                        List<TitlesEntity> titles,
+                        List<WritersEntity> writers ) {
+
+        readAliasAttributes(fileName, aliasAttributes);
+        readAliasTypes(fileName, aliasTypes);
 
         readTitles(fileName, titles);
         readGenres(fileName, titleGenres);
+        readRatings(fileName, titleRatings);
 
 
+    }
+
+    void readAliasAttributes(String fileName, List<AliasAttributesEntity> list) {
+        // ALIAS ATTRIBUTES /////////////////////////////////////
+        try (BufferedReader br = new BufferedReader(new FileReader(fileName + "/Alias_attributes.tsv"))) {
+            br.readLine();
+            String line = br.readLine();
+
+            while (line != null) {
+
+                String[] attributes = line.split("\t");
+
+                AliasAttributesEntity l = mapper.createAliasAttributesEntity(attributes);
+
+                list.add(l);
+                line = br.readLine();
+            }
+
+        } catch (IOException ioe) {
+            ioe.printStackTrace();
+        }
+    }
+
+    void readAliasTypes(String fileName, List<AliasTypesEntity> list) {
+        // ALIAS TYPES /////////////////////////////////////
+        try (BufferedReader br = new BufferedReader(new FileReader(fileName + "/Alias_types.tsv"))) {
+            br.readLine();
+            String line = br.readLine();
+
+            while (line != null) {
+
+                String[] attributes = line.split("\t");
+
+                AliasTypesEntity l = mapper.createAliasTypesEntity(attributes);
+
+                list.add(l);
+                line = br.readLine();
+            }
+
+        } catch (IOException ioe) {
+            ioe.printStackTrace();
+        }
     }
 
     void readTitles(String fileName, List<TitlesEntity> titles) {
@@ -53,6 +112,27 @@ public class CsvReader {
                 TitleGenresEntity title = mapper.createTitleGenresEntity(attributes);
 
                 titleGenres.add(title);
+                line = br.readLine();
+            }
+
+        } catch (IOException ioe) {
+            ioe.printStackTrace();
+        }
+    }
+
+    void readRatings(String fileName, List<TitleRatingsEntity> list) {
+        // RATINGS /////////////////////////////////////
+        try (BufferedReader br = new BufferedReader(new FileReader(fileName + "/Title_ratings.tsv"))) {
+            br.readLine();
+            String line = br.readLine();
+
+            while (line != null) {
+
+                String[] attributes = line.split("\t");
+
+                TitleRatingsEntity l = mapper.createTitleRatingsEntity(attributes);
+
+                list.add(l);
                 line = br.readLine();
             }
 
