@@ -155,7 +155,9 @@ public class HelloController {
         Transaction transaction = session.beginTransaction();
         try {
             startTime = System.currentTimeMillis();
-
+            for (TitlesEntity t : titles) {
+                session.persist(t);
+            }
             for (AliasAttributesEntity l : aliasAttributes) {
                 session.persist(l);
             }
@@ -192,9 +194,7 @@ public class HelloController {
             for (TitleRatingsEntity l : titleRatings) {
                 session.persist(l);
             }
-            for (TitlesEntity t : titles) {
-                session.persist(t);
-            }
+
             for (WritersEntity l : writers) {
                 session.persist(l);
             }

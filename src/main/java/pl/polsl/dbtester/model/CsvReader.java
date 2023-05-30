@@ -28,6 +28,7 @@ public class CsvReader {
 
         readAliasAttributes(fileName, aliasAttributes);
         readAliasTypes(fileName, aliasTypes);
+        readAliases(fileName, aliases);
 
         readTitles(fileName, titles);
         readGenres(fileName, titleGenres);
@@ -78,6 +79,26 @@ public class CsvReader {
         }
     }
 
+    void readAliases(String fileName, List<AliasesEntity> list) {
+        // ALIASES /////////////////////////////////////
+        try (BufferedReader br = new BufferedReader(new FileReader(fileName + "/Aliases.tsv"))) {
+            br.readLine();
+            String line = br.readLine();
+
+            while (line != null) {
+
+                String[] attributes = line.split("\t");
+
+                AliasesEntity l = mapper.createAliasesEntity(attributes);
+
+                list.add(l);
+                line = br.readLine();
+            }
+
+        } catch (IOException ioe) {
+            ioe.printStackTrace();
+        }
+    }
     void readTitles(String fileName, List<TitlesEntity> titles) {
         // TITLES /////////////////////////////////////
         try (BufferedReader br = new BufferedReader(new FileReader(fileName + "/Titles.tsv"))) {
