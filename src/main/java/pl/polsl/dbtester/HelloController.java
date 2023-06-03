@@ -23,6 +23,22 @@ public class HelloController {
     private Configuration config;
     private SessionFactory sessionFactory;
     private Session session;
+
+    List<AliasAttributesEntity> aliasAttributes = new ArrayList<>();
+    List<AliasTypesEntity> aliasTypes = new ArrayList<>();
+    List<AliasesEntity> aliases = new ArrayList<>();
+    List<DirectorsEntity> directors = new ArrayList<>();
+    List<EpisodeBelongsToEntity> episodeBelongsTo = new ArrayList<>();
+    List<HadRoleEntity> hadRole = new ArrayList<>();
+    List<KnownForEntity> knownFor = new ArrayList<>();
+    List<NameWorkedAsEntity> nameWorkedAs = new ArrayList<>();
+    List<NamesEntity> names = new ArrayList<>();
+    List<PrincipalsEntity> principals = new ArrayList<>();
+    List<TitleGenresEntity> titleGenres = new ArrayList<>();
+    List<TitleRatingsEntity> titleRatings = new ArrayList<>();
+    List<TitlesEntity> titles = new ArrayList<>();
+    List<WritersEntity> writers = new ArrayList<>();
+
     @FXML
     private Label logLabel;
 
@@ -57,7 +73,7 @@ public class HelloController {
         databaseComboBox.getSelectionModel().selectFirst();
 
         rowNumberComboBox.getItems().addAll(
-                "1000", "10000", "100000"
+                "1000", "10000", "100000", "1000000"
         );
         rowNumberComboBox.getSelectionModel().selectFirst();
 
@@ -77,6 +93,9 @@ public class HelloController {
         switch (operation) {
             case insert: {
                 changeSession();
+                String fileName = "data/" + rowNumberComboBox.getValue().toString();
+                reader.readCsv(fileName, aliasAttributes, aliasTypes, aliases, directors, episodeBelongsTo, hadRole, knownFor, nameWorkedAs,
+                        names, principals, titleGenres, titleRatings, titles, writers);
                 insert(rowNumberComboBox.getValue().toString());
 
                 enableInsert(false);
@@ -121,6 +140,9 @@ public class HelloController {
     }
 
     void insertDelete(String numberOfRows) {
+        String fileName = "data/" + rowNumberComboBox.getValue().toString();
+        reader.readCsv(fileName, aliasAttributes, aliasTypes, aliases, directors, episodeBelongsTo, hadRole, knownFor, nameWorkedAs,
+                names, principals, titleGenres, titleRatings, titles, writers);
         for (int i = 0; i < numberOfIternations; i++) {
             changeSession();
             insert(numberOfRows);
@@ -133,81 +155,67 @@ public class HelloController {
         long startTime = 0L;
         long endTime = 0L;
 
-        List<AliasAttributesEntity> aliasAttributes = new ArrayList<>();
-        List<AliasTypesEntity> aliasTypes = new ArrayList<>();
-        List<AliasesEntity> aliases = new ArrayList<>();
-        List<DirectorsEntity> directors = new ArrayList<>();
-        List<EpisodeBelongsToEntity> episodeBelongsTo = new ArrayList<>();
-        List<HadRoleEntity> hadRole = new ArrayList<>();
-        List<KnownForEntity> knownFor = new ArrayList<>();
-        List<NameWorkedAsEntity> nameWorkedAs = new ArrayList<>();
-        List<NamesEntity> names = new ArrayList<>();
-        List<PrincipalsEntity> principals = new ArrayList<>();
-        List<TitleGenresEntity> titleGenres = new ArrayList<>();
-        List<TitleRatingsEntity> titleRatings = new ArrayList<>();
-        List<TitlesEntity> titles = new ArrayList<>();
-        List<WritersEntity> writers = new ArrayList<>();
 
-        String fileName = "data/" + numberOfRows;
-        reader.readCsv(fileName, aliasAttributes, aliasTypes, aliases, directors, episodeBelongsTo, hadRole, knownFor, nameWorkedAs,
-                names, principals, titleGenres, titleRatings, titles, writers);
-
+logLabel.setText("Odczytane z pliku\n");
         Transaction transaction = session.beginTransaction();
         try {
             startTime = System.currentTimeMillis();
             for (TitlesEntity t : titles) {
                 session.persist(t);
             }
+            logLabel.setText("TitlesEntity\n");
             for (NamesEntity l : names) {
                 session.persist(l);
             }
+            logLabel.setText("NamesEntity\n");
             for (AliasAttributesEntity l : aliasAttributes) {
                 session.persist(l);
             }
+            logLabel.setText("AliasAttributesEntity\n");
             for (AliasTypesEntity l : aliasTypes) {
                 session.persist(l);
             }
+            logLabel.setText("AliasTypesEntity\n");
             for (AliasesEntity l : aliases) {
                 session.persist(l);
             }
+            logLabel.setText("AliasesEntity\n");
             for (TitleGenresEntity g : titleGenres) {
                 session.persist(g);
             }
+            logLabel.setText("TitleGenresEntity\n");
             for (TitleRatingsEntity l : titleRatings) {
                 session.persist(l);
             }
-
+            logLabel.setText("TitleRatingsEntity\n");
             for (HadRoleEntity l : hadRole) {
                 session.persist(l);
             }
-
+            logLabel.setText("HadRoleEntity\n");
             for (NameWorkedAsEntity l : nameWorkedAs) {
                 session.persist(l);
             }
-
+            logLabel.setText("NameWorkedAsEntity\n");
             for (PrincipalsEntity l : principals) {
                 session.persist(l);
             }
-
-
-
-
-
-
-
-
+            logLabel.setText("PrincipalsEntity\n");
             for (KnownForEntity l : knownFor) {
                 session.persist(l);
             }
+            logLabel.setText("KnownForEntity\n");
             for (DirectorsEntity l : directors) {
                 session.persist(l);
             }
+            logLabel.setText("DirectorsEntity\n");
             for (WritersEntity l : writers) {
                 session.persist(l);
             }
+            logLabel.setText("WritersEntity\n");
             for (EpisodeBelongsToEntity l : episodeBelongsTo) {
                 session.persist(l);
             }
+            logLabel.setText("EpisodeBelongsToEntity\n");
             transaction.commit();
             endTime = System.currentTimeMillis();
         } finally {
@@ -270,6 +278,16 @@ public class HelloController {
                 startTime = System.currentTimeMillis();
                 session.createQuery("DELETE FROM pl.polsl.dbtester.entity.TitleGenresEntity").executeUpdate();
                 session.createQuery("DELETE FROM pl.polsl.dbtester.entity.TitleRatingsEntity ").executeUpdate();
+                session.createQuery("DELETE FROM pl.polsl.dbtester.entity.AliasAttributesEntity").executeUpdate();
+                session.createQuery("DELETE FROM pl.polsl.dbtester.entity.AliasTypesEntity").executeUpdate();
+                session.createQuery("DELETE FROM pl.polsl.dbtester.entity.AliasesEntity").executeUpdate();
+                session.createQuery("DELETE FROM pl.polsl.dbtester.entity.KnownForEntity").executeUpdate();
+                session.createQuery("DELETE FROM pl.polsl.dbtester.entity.NameWorkedAsEntity").executeUpdate();
+                session.createQuery("DELETE FROM pl.polsl.dbtester.entity.PrincipalsEntity").executeUpdate();
+                session.createQuery("DELETE FROM pl.polsl.dbtester.entity.DirectorsEntity").executeUpdate();
+                session.createQuery("DELETE FROM pl.polsl.dbtester.entity.WritersEntity").executeUpdate();
+                session.createQuery("DELETE FROM pl.polsl.dbtester.entity.HadRoleEntity").executeUpdate();
+                session.createQuery("DELETE FROM pl.polsl.dbtester.entity.NamesEntity").executeUpdate();
                 session.createQuery("DELETE FROM pl.polsl.dbtester.entity.TitlesEntity").executeUpdate();
             }
             transaction.commit();

@@ -36,13 +36,26 @@ public class Mapper {
     }
 
     public AliasesEntity createAliasesEntity(String[] attributes) {
+        String region = attributes[3];
+        if (region.length() >= 4) {
+            region = region.substring(0, 4);
+        }
+        String language = attributes[4];
+        if (language.length() >= 4) {
+            language = language.substring(0, 4);
+        }
         AliasesEntity aliasesEntity = new AliasesEntity();
         aliasesEntity.setTitleId(attributes[0]);
         aliasesEntity.setOrdering(toInt(attributes[1]));
         aliasesEntity.setTitle(attributes[2]);
-        aliasesEntity.setRegion(attributes[3]);
-        aliasesEntity.setLanguage(attributes[4]);
-        aliasesEntity.setIsOriginalTitle(toByte(attributes[5]));
+        aliasesEntity.setRegion(region);
+        aliasesEntity.setLanguage(language);
+        if (attributes.length >= 6) {
+            aliasesEntity.setIsOriginalTitle(toByte(attributes[5]));
+        } else {
+            aliasesEntity.setIsOriginalTitle(Byte.parseByte("0"));
+        }
+
 
         return aliasesEntity;
     }
@@ -87,10 +100,9 @@ public class Mapper {
         HadRoleEntity hadRoleEntity = new HadRoleEntity();
         hadRoleEntity.setTitleId(attributes[0]);
         hadRoleEntity.setNameId(attributes[1]);
-        if(attributes.length >=3) {
+        if (attributes.length >= 3) {
             hadRoleEntity.setRole(attributes[2]);
-        }
-        else {
+        } else {
             hadRoleEntity.setRole("");
         }
 
