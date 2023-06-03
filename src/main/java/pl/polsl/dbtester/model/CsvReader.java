@@ -29,6 +29,14 @@ public class CsvReader {
         readAliasAttributes(fileName, aliasAttributes);
         readAliasTypes(fileName, aliasTypes);
         readAliases(fileName, aliases);
+        readDirectors(fileName, directors);
+        readEpisodeBelongsTo(fileName, episodeBelongsTo);
+        readHadRole(fileName, hadRole);
+        readKnownFor(fileName, knownFor);
+        readNameWorkedAsEntity(fileName, nameWorkedAs);
+        readNamesEntity(fileName, names);
+        readPrincipalsEntity(fileName, principals);
+        readWritersEntity(fileName, writers);
 
         readTitles(fileName, titles);
         readGenres(fileName, titleGenres);
@@ -99,6 +107,169 @@ public class CsvReader {
             ioe.printStackTrace();
         }
     }
+
+    void readDirectors(String fileName, List<DirectorsEntity> list) {
+        // DIRECTORS /////////////////////////////////////
+        try (BufferedReader br = new BufferedReader(new FileReader(fileName + "/Directors.tsv"))) {
+            br.readLine();
+            String line = br.readLine();
+
+            while (line != null) {
+
+                String[] attributes = line.split("\t");
+
+                DirectorsEntity l = mapper.createDirectorsEntity(attributes);
+
+                list.add(l);
+                line = br.readLine();
+            }
+
+        } catch (IOException ioe) {
+            ioe.printStackTrace();
+        }
+    }
+
+    void readEpisodeBelongsTo(String fileName, List<EpisodeBelongsToEntity> list) {
+        // DIRECTORS /////////////////////////////////////
+        try (BufferedReader br = new BufferedReader(new FileReader(fileName + "/Episode_belongs_to.tsv"))) {
+            br.readLine();
+            String line = br.readLine();
+
+            while (line != null) {
+
+                String[] attributes = line.split("\t");
+
+                EpisodeBelongsToEntity l = mapper.createEpisodeBelongsToEntity(attributes);
+
+                list.add(l);
+                line = br.readLine();
+            }
+
+        } catch (IOException ioe) {
+            ioe.printStackTrace();
+        }
+    }
+
+    void readHadRole(String fileName, List<HadRoleEntity> list) {
+        try (BufferedReader br = new BufferedReader(new FileReader(fileName + "/Had_role.tsv"))) {
+            br.readLine();
+            String line = br.readLine();
+
+            while (line != null) {
+
+                String[] attributes = line.split("\t");
+
+                HadRoleEntity l = mapper.createHadRoleEntity(attributes);
+
+                list.add(l);
+                line = br.readLine();
+            }
+
+        } catch (IOException ioe) {
+            ioe.printStackTrace();
+        }
+    }
+
+    void readKnownFor(String fileName, List<KnownForEntity> list) {
+        try (BufferedReader br = new BufferedReader(new FileReader(fileName + "/Known_for.tsv"))) {
+            br.readLine();
+            String line = br.readLine();
+
+            while (line != null) {
+
+                String[] attributes = line.split("\t");
+
+                KnownForEntity l = mapper.createKnownForEntity(attributes);
+
+                list.add(l);
+                line = br.readLine();
+            }
+
+        } catch (IOException ioe) {
+            ioe.printStackTrace();
+        }
+    }
+
+    void readNamesEntity(String fileName, List<NamesEntity> list) {
+        try (BufferedReader br = new BufferedReader(new FileReader(fileName + "/Names_.tsv"))) {
+            br.readLine();
+            String line = br.readLine();
+
+            while (line != null) {
+
+                String[] attributes = line.split("\t");
+
+                NamesEntity l = mapper.createNamesEntity(attributes);
+
+                list.add(l);
+                line = br.readLine();
+            }
+
+        } catch (IOException ioe) {
+            ioe.printStackTrace();
+        }
+    }
+
+    void readNameWorkedAsEntity(String fileName, List<NameWorkedAsEntity> list) {
+        try (BufferedReader br = new BufferedReader(new FileReader(fileName + "/Name_worked_as.tsv"))) {
+            br.readLine();
+            String line = br.readLine();
+
+            while (line != null) {
+
+                String[] attributes = line.split("\t");
+
+                NameWorkedAsEntity l = mapper.createNameWorkedAsEntity(attributes);
+
+                list.add(l);
+                line = br.readLine();
+            }
+
+        } catch (IOException ioe) {
+            ioe.printStackTrace();
+        }
+    }
+
+    void readPrincipalsEntity(String fileName, List<PrincipalsEntity> list) {
+        try (BufferedReader br = new BufferedReader(new FileReader(fileName + "/Principals.tsv"))) {
+            br.readLine();
+            String line = br.readLine();
+
+            while (line != null) {
+
+                String[] attributes = line.split("\t");
+
+                PrincipalsEntity l = mapper.createPrincipalsEntity(attributes);
+
+                list.add(l);
+                line = br.readLine();
+            }
+
+        } catch (IOException ioe) {
+            ioe.printStackTrace();
+        }
+    }
+
+    void readWritersEntity(String fileName, List<WritersEntity> list) {
+        try (BufferedReader br = new BufferedReader(new FileReader(fileName + "/Writers.tsv"))) {
+            br.readLine();
+            String line = br.readLine();
+
+            while (line != null) {
+
+                String[] attributes = line.split("\t");
+
+                WritersEntity l = mapper.createWritersEntity(attributes);
+
+                list.add(l);
+                line = br.readLine();
+            }
+
+        } catch (IOException ioe) {
+            ioe.printStackTrace();
+        }
+    }
+
     void readTitles(String fileName, List<TitlesEntity> titles) {
         // TITLES /////////////////////////////////////
         try (BufferedReader br = new BufferedReader(new FileReader(fileName + "/Titles.tsv"))) {

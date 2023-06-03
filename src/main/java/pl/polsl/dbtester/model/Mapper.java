@@ -42,7 +42,7 @@ public class Mapper {
         aliasesEntity.setTitle(attributes[2]);
         aliasesEntity.setRegion(attributes[3]);
         aliasesEntity.setLanguage(attributes[4]);
-        aliasesEntity.setIsOriginalTitle(Byte.parseByte(attributes[5]));
+        aliasesEntity.setIsOriginalTitle(toByte(attributes[5]));
 
         return aliasesEntity;
     }
@@ -87,7 +87,12 @@ public class Mapper {
         HadRoleEntity hadRoleEntity = new HadRoleEntity();
         hadRoleEntity.setTitleId(attributes[0]);
         hadRoleEntity.setNameId(attributes[1]);
-        hadRoleEntity.setRole(attributes[2]);
+        if(attributes.length >=3) {
+            hadRoleEntity.setRole(attributes[2]);
+        }
+        else {
+            hadRoleEntity.setRole("");
+        }
 
         return hadRoleEntity;
     }

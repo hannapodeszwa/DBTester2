@@ -158,6 +158,9 @@ public class HelloController {
             for (TitlesEntity t : titles) {
                 session.persist(t);
             }
+            for (NamesEntity l : names) {
+                session.persist(l);
+            }
             for (AliasAttributesEntity l : aliasAttributes) {
                 session.persist(l);
             }
@@ -167,27 +170,6 @@ public class HelloController {
             for (AliasesEntity l : aliases) {
                 session.persist(l);
             }
-            for (DirectorsEntity l : directors) {
-                session.persist(l);
-            }
-            for (EpisodeBelongsToEntity l : episodeBelongsTo) {
-                session.persist(l);
-            }
-            for (HadRoleEntity l : hadRole) {
-                session.persist(l);
-            }
-            for (KnownForEntity l : knownFor) {
-                session.persist(l);
-            }
-            for (NameWorkedAsEntity l : nameWorkedAs) {
-                session.persist(l);
-            }
-            for (NamesEntity l : names) {
-                session.persist(l);
-            }
-            for (PrincipalsEntity l : principals) {
-                session.persist(l);
-            }
             for (TitleGenresEntity g : titleGenres) {
                 session.persist(g);
             }
@@ -195,10 +177,37 @@ public class HelloController {
                 session.persist(l);
             }
 
-            for (WritersEntity l : writers) {
+            for (HadRoleEntity l : hadRole) {
                 session.persist(l);
             }
 
+            for (NameWorkedAsEntity l : nameWorkedAs) {
+                session.persist(l);
+            }
+
+            for (PrincipalsEntity l : principals) {
+                session.persist(l);
+            }
+
+
+
+
+
+
+
+
+            for (KnownForEntity l : knownFor) {
+                session.persist(l);
+            }
+            for (DirectorsEntity l : directors) {
+                session.persist(l);
+            }
+            for (WritersEntity l : writers) {
+                session.persist(l);
+            }
+            for (EpisodeBelongsToEntity l : episodeBelongsTo) {
+                session.persist(l);
+            }
             transaction.commit();
             endTime = System.currentTimeMillis();
         } finally {
