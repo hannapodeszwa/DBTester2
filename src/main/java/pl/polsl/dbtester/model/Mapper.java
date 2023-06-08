@@ -51,9 +51,9 @@ public class Mapper {
         aliasesEntity.setRegion(region);
         aliasesEntity.setLanguage(language);
         if (attributes.length >= 6) {
-            aliasesEntity.setIsOriginalTitle(toByte(attributes[5]));
+            aliasesEntity.setIsOriginalTitle(toBoolean(attributes[5]));
         } else {
-            aliasesEntity.setIsOriginalTitle(Byte.parseByte("0"));
+            aliasesEntity.setIsOriginalTitle(Boolean.parseBoolean("0"));
         }
 
 
@@ -172,5 +172,10 @@ public class Mapper {
     Byte toByte(String attribute) {
         if (attribute.equals("\\N")) return null;
         else return Byte.parseByte(attribute);
+    }
+
+    Boolean toBoolean(String attribute) {
+        if (attribute.equals("\\N")) return null;
+        else return Boolean.parseBoolean(attribute);
     }
 }

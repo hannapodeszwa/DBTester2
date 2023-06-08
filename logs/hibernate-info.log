@@ -1,24 +1,24 @@
-14:34:10.350 [JavaFX Application Thread] INFO  org.hibernate.Version - HHH000412: Hibernate Core {[WORKING]}
-14:34:10.353 [JavaFX Application Thread] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
-14:34:10.787 [JavaFX Application Thread] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.3.Final}
-14:34:11.106 [JavaFX Application Thread] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-14:34:11.117 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/imdb]
-14:34:11.117 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
-14:34:11.118 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
-14:34:11.120 [JavaFX Application Thread] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
-14:34:11.677 [JavaFX Application Thread] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
-14:34:28.351 [JavaFX Application Thread] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1452, SQLState: 23000
-14:34:28.351 [JavaFX Application Thread] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Cannot add or update a child row: a foreign key constraint fails (`imdb`.`aliases`, CONSTRAINT `Aliases_title_id_fkey` FOREIGN KEY (`title_id`) REFERENCES `titles` (`title_id`))
-14:34:28.352 [JavaFX Application Thread] ERROR org.hibernate.internal.ExceptionMapperStandardImpl - HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
-14:34:29.061 [JavaFX Application Thread] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener - Session Metrics {
-    684700 nanoseconds spent acquiring 1 JDBC connections;
-    623100 nanoseconds spent releasing 1 JDBC connections;
-    1073681723 nanoseconds spent preparing 60397 JDBC statements;
-    11388596357 nanoseconds spent executing 60397 JDBC statements;
+23:53:05.961 [JavaFX Application Thread] INFO  org.hibernate.ogm.datastore.impl.DatastoreProviderInitiator - OGM000016: NoSQL Datastore provider: org.hibernate.ogm.datastore.mongodb.impl.MongoDBDatastoreProvider
+23:53:05.961 [JavaFX Application Thread] INFO  org.hibernate.ogm.datastore.mongodb.impl.MongoDBDatastoreProvider - OGM001201: Connecting to MongoDB at 127.0.0.1:27017 with a timeout set at 10000 millisecond(s)
+23:53:05.963 [JavaFX Application Thread] INFO  org.hibernate.ogm.datastore.mongodb.impl.MongoDBDatastoreProvider - OGM001207: Connecting to Mongo database named [imdb].
+23:53:05.971 [JavaFX Application Thread] INFO  org.hibernate.ogm.dialect.impl.GridDialectInitiator - OGM000017: Grid Dialect: org.hibernate.ogm.dialect.impl.BatchOperationsDelegator
+23:53:05.972 [JavaFX Application Thread] INFO  org.hibernate.ogm.dialect.impl.GridDialectInitiator - Grid dialect logs are disabled
+23:53:05.972 [JavaFX Application Thread] INFO  org.hibernate.ogm.dialect.impl.GridDialectInitiator - OGM000017: Grid Dialect: org.hibernate.ogm.dialect.impl.BatchOperationsDelegator
+23:53:05.972 [JavaFX Application Thread] INFO  org.hibernate.ogm.dialect.impl.GridDialectInitiator - Grid dialect logs are disabled
+23:53:05.972 [JavaFX Application Thread] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.ogm.dialect.impl.OgmDialect
+23:53:05.972 [JavaFX Application Thread] WARN  org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator - HHH000342: Could not obtain connection to query metadata : null
+23:53:05.972 [JavaFX Application Thread] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.ogm.dialect.impl.OgmDialect
+23:53:05.973 [JavaFX Application Thread] INFO  org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl - HHH000422: Disabling contextual LOB creation as connection was null
+23:53:06.014 [JavaFX Application Thread] INFO  org.hibernate.ogm.transaction.impl.OgmJtaPlatformInitiator - OGM000076: No explicit or implicit defined JTAPlatform. Using NoJtaPlatform
+23:53:06.020 [JavaFX Application Thread] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
     0 nanoseconds spent executing 0 JDBC batches;
     0 nanoseconds spent performing 0 L2C puts;
     0 nanoseconds spent performing 0 L2C hits;
     0 nanoseconds spent performing 0 L2C misses;
-    13735752199 nanoseconds spent executing 1 flushes (flushing a total of 430459 entities and 0 collections);
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
     0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
 }

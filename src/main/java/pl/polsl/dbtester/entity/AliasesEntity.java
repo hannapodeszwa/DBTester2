@@ -25,7 +25,7 @@ public class AliasesEntity {
     private String language;
     @Basic
     @Column(name = "is_original_title")
-    private Byte isOriginalTitle;
+    private Boolean isOriginalTitle;
     @ManyToOne
     @JoinColumn(name = "title_id", referencedColumnName = "title_id", nullable = false, insertable = false, updatable = false)
     private TitlesEntity titlesByTitleId;
@@ -70,11 +70,11 @@ public class AliasesEntity {
         this.language = language;
     }
 
-    public Byte getIsOriginalTitle() {
+    public Boolean getIsOriginalTitle() {
         return isOriginalTitle;
     }
 
-    public void setIsOriginalTitle(Byte isOriginalTitle) {
+    public void setIsOriginalTitle(Boolean isOriginalTitle) {
         this.isOriginalTitle = isOriginalTitle;
     }
 
