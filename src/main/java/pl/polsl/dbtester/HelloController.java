@@ -3,6 +3,7 @@ package pl.polsl.dbtester;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import org.w3c.dom.Document;
 import pl.polsl.dbtester.entity.*;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -66,7 +67,8 @@ public class HelloController {
         insertDelete,
         selectAllTitles,
         sort,
-        updateAllTitles
+        updateAllTitles,
+        updateWhereTitles
     }
 
     @FXML
@@ -133,6 +135,11 @@ public class HelloController {
             case updateAllTitles: {
                 changeSession();
                 updateAllTitles();
+                break;
+            }
+            case updateWhereTitles: {
+                changeSession();
+                updateWhereTitles();
                 break;
             }
         }
@@ -252,7 +259,13 @@ public class HelloController {
         Transaction transaction = session.beginTransaction();
         try {
             startTime = System.currentTimeMillis();
-            session.createQuery("UPDATE pl.polsl.dbtester.entity.TitlesEntity SET end_Year = 2023").executeUpdate();
+            if (selectedDatabase.equals(Database.MONGODB)) {
+                String updateQuery = "db.titles.update({}, {$set: {endYear: 2023}}, {multi: true})";
+                session.createNativeQuery(updateQuery).executeUpdate();
+            }
+            else {
+                session.createQuery("UPDATE pl.polsl.dbtester.entity.TitlesEntity SET end_Year = 2023").executeUpdate();
+            }
             transaction.commit();
             endTime = System.currentTimeMillis();
         } finally {
@@ -265,13 +278,45 @@ public class HelloController {
         }
     }
 
+    void updateWhereTitles() {
+        long startTime = 0L;
+        long endTime = 0L;
+        Transaction transaction = session.beginTransaction();
+        try {
+            startTime = System.currentTimeMillis();
+//            if (selectedDatabase.equals(Database.MONGODB)) {
+//                String updateQuery = "db.titles.update({}, {$set: {endYear: 2023}}, {multi: true})";
+//                session.createNativeQuery(updateQuery).executeUpdate();
+//            }
+//            else {
+            session.createQuery("UPDATE pl.polsl.dbtester.entity.TitlesEntity t SET endYear = 2024\n" +
+                    "WHERE t.titleId IN (\n" +
+                    "    SELECT w.titleId FROM pl.polsl.dbtester.entity.WritersEntity w\n" +
+                    "    JOIN pl.polsl.dbtester.entity.NamesEntity n ON w.nameId = n.nameId\n" +
+                    "    WHERE n.birthYear < 1970)").executeUpdate();
+
+
+
+
+            // }
+            transaction.commit();
+            endTime = System.currentTimeMillis();
+        } finally {
+            if (transaction.isActive()) {
+                transaction.rollback();
+            }
+            session.close();
+            long executionTime = endTime - startTime;
+            logLabel.setText(logLabel.getText() + "\nUpdate where titles: " + executionTime + " ms");
+        }
+    }
+
     void selectAllTitles() {
         long startTime = 0L;
         long endTime = 0L;
         Transaction transaction = session.beginTransaction();
         try {
             startTime = System.currentTimeMillis();
-            // session.createQuery("SELECT t FROM TitlesEntity t");
             session.createQuery("SELECT t FROM pl.polsl.dbtester.entity.TitlesEntity t", TitlesEntity.class).getResultList();
             transaction.commit();
             endTime = System.currentTimeMillis();
