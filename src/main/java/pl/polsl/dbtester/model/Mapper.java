@@ -86,15 +86,15 @@ public class Mapper {
         return directorsEntity;
     }
 
-    public EpisodeBelongsToEntity createEpisodeBelongsToEntity(String[] attributes) {
-        EpisodeBelongsToEntity episodeBelongsToEntity = new EpisodeBelongsToEntity();
-        episodeBelongsToEntity.setEpisodeTitleId(attributes[0]);
-        episodeBelongsToEntity.setParentTvShowTitleId(attributes[1]);
-        episodeBelongsToEntity.setSeasonNumber(toInt(attributes[2]));
-        episodeBelongsToEntity.setEpisodeNumber(toInt(attributes[3]));
-
-        return episodeBelongsToEntity;
-    }
+//    public EpisodeBelongsToEntity createEpisodeBelongsToEntity(String[] attributes) {
+//        EpisodeBelongsToEntity episodeBelongsToEntity = new EpisodeBelongsToEntity();
+//        episodeBelongsToEntity.setEpisodeTitleId(attributes[0]);
+//        episodeBelongsToEntity.setParentTvShowTitleId(attributes[1]);
+//        episodeBelongsToEntity.setSeasonNumber(toInt(attributes[2]));
+//        episodeBelongsToEntity.setEpisodeNumber(toInt(attributes[3]));
+//
+//        return episodeBelongsToEntity;
+//    }
 
     public HadRoleEntity createHadRoleEntity(String[] attributes) {
         HadRoleEntity hadRoleEntity = new HadRoleEntity();

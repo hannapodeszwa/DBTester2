@@ -7,7 +7,7 @@
         <property name="hibernate.archive.autodetection">class, hbm</property>
 
         <property name="hibernate.generate_statistics">true</property>
-        <property name="connection.url">jdbc:mysql://localhost:3306/imdb100tys</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/imdb</property>
         <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
         <property name="connection.username">root</property>
         <property name="connection.password">mysql</property>
@@ -15,7 +15,7 @@
         <mapping class="pl.polsl.dbtester.entity.AliasTypesEntity"/>
         <mapping class="pl.polsl.dbtester.entity.AliasesEntity"/>
         <mapping class="pl.polsl.dbtester.entity.DirectorsEntity"/>
-        <mapping class="pl.polsl.dbtester.entity.EpisodeBelongsToEntity"/>
+<!--        <mapping class="pl.polsl.dbtester.entity.EpisodeBelongsToEntity"/>-->
         <mapping class="pl.polsl.dbtester.entity.HadRoleEntity"/>
         <mapping class="pl.polsl.dbtester.entity.KnownForEntity"/>
         <mapping class="pl.polsl.dbtester.entity.NameWorkedAsEntity"/>

@@ -8,7 +8,7 @@
         <class>pl.polsl.dbtester.entity.AliasTypesEntity</class>
         <class>pl.polsl.dbtester.entity.AliasesEntity</class>
         <class>pl.polsl.dbtester.entity.DirectorsEntity</class>
-        <class>pl.polsl.dbtester.entity.EpisodeBelongsToEntity</class>
+<!--        <class>pl.polsl.dbtester.entity.EpisodeBelongsToEntity</class>-->
         <class>pl.polsl.dbtester.entity.HadRoleEntity</class>
         <class>pl.polsl.dbtester.entity.KnownForEntity</class>
         <class>pl.polsl.dbtester.entity.NameWorkedAsEntity</class>

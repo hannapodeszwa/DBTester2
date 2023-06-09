@@ -15,7 +15,7 @@ public class CsvReader {
                         List<AliasTypesEntity> aliasTypes,
                         List<AliasesEntity> aliases,
                         List<DirectorsEntity> directors,
-                        List<EpisodeBelongsToEntity> episodeBelongsTo,
+                        //List<EpisodeBelongsToEntity> episodeBelongsTo,
                         List<HadRoleEntity> hadRole,
                         List<KnownForEntity> knownFor,
                         List<NameWorkedAsEntity> nameWorkedAs,
@@ -30,7 +30,7 @@ public class CsvReader {
         readAliasTypes(fileName, aliasTypes);
         readAliases(fileName, aliases);
         readDirectors(fileName, directors);
-        readEpisodeBelongsTo(fileName, episodeBelongsTo);
+        //readEpisodeBelongsTo(fileName, episodeBelongsTo);
         readHadRole(fileName, hadRole);
         readKnownFor(fileName, knownFor);
         readNameWorkedAsEntity(fileName, nameWorkedAs);
@@ -129,26 +129,26 @@ public class CsvReader {
         }
     }
 
-    void readEpisodeBelongsTo(String fileName, List<EpisodeBelongsToEntity> list) {
-        // DIRECTORS /////////////////////////////////////
-        try (BufferedReader br = new BufferedReader(new FileReader(fileName + "/Episode_belongs_to.tsv"))) {
-            br.readLine();
-            String line = br.readLine();
-
-            while (line != null) {
-
-                String[] attributes = line.split("\t");
-
-                EpisodeBelongsToEntity l = mapper.createEpisodeBelongsToEntity(attributes);
-
-                list.add(l);
-                line = br.readLine();
-            }
-
-        } catch (IOException ioe) {
-            ioe.printStackTrace();
-        }
-    }
+//    void readEpisodeBelongsTo(String fileName, List<EpisodeBelongsToEntity> list) {
+//        // DIRECTORS /////////////////////////////////////
+//        try (BufferedReader br = new BufferedReader(new FileReader(fileName + "/Episode_belongs_to.tsv"))) {
+//            br.readLine();
+//            String line = br.readLine();
+//
+//            while (line != null) {
+//
+//                String[] attributes = line.split("\t");
+//
+//                EpisodeBelongsToEntity l = mapper.createEpisodeBelongsToEntity(attributes);
+//
+//                list.add(l);
+//                line = br.readLine();
+//            }
+//
+//        } catch (IOException ioe) {
+//            ioe.printStackTrace();
+//        }
+//    }
 
     void readHadRole(String fileName, List<HadRoleEntity> list) {
         try (BufferedReader br = new BufferedReader(new FileReader(fileName + "/Had_role.tsv"))) {

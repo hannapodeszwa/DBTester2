@@ -1,0 +1,2 @@
+Acquiring JDBC connections,Releasing JDBC connections,Preparing JDBC statements,Executing JDBC statements,Executing JDBC batches,Performing L2C puts,Performing L2C hits,Performing L2C misses,Executing flushes,Executing partial-flushes
+12200,14900,40000800,9585944500,0,0,0,0,658600100,6300

@@ -31,7 +31,7 @@ public class HelloController {
     List<AliasTypesEntity> aliasTypes = new ArrayList<>();
     List<AliasesEntity> aliases = new ArrayList<>();
     List<DirectorsEntity> directors = new ArrayList<>();
-    List<EpisodeBelongsToEntity> episodeBelongsTo = new ArrayList<>();
+    //List<EpisodeBelongsToEntity> episodeBelongsTo = new ArrayList<>();
     List<HadRoleEntity> hadRole = new ArrayList<>();
     List<KnownForEntity> knownFor = new ArrayList<>();
     List<NameWorkedAsEntity> nameWorkedAs = new ArrayList<>();
@@ -63,7 +63,6 @@ public class HelloController {
     enum Operation {
         insert,
         delete,
-        update,
         insertDelete,
         selectAllTitles,
         sort,
@@ -100,7 +99,7 @@ public class HelloController {
             case insert: {
                 changeSession();
                 String fileName = "data/" + rowNumberComboBox.getValue().toString();
-                reader.readCsv(fileName, aliasAttributes, aliasTypes, aliases, directors, episodeBelongsTo, hadRole, knownFor, nameWorkedAs,
+                reader.readCsv(fileName, aliasAttributes, aliasTypes, aliases, directors, hadRole, knownFor, nameWorkedAs,
                         names, principals, titleGenres, titleRatings, titles, writers);
                 insert(rowNumberComboBox.getValue().toString());
 
@@ -112,10 +111,6 @@ public class HelloController {
                 delete();
 
                 enableInsert(true);
-                break;
-            }
-            case update: {
-                changeSession();
                 break;
             }
             case insertDelete: {
@@ -143,6 +138,7 @@ public class HelloController {
                 break;
             }
         }
+        System.out.println("zapis");
         statisticToCsv(operation);
     }
 
@@ -162,7 +158,7 @@ public class HelloController {
 
     void insertDelete(String numberOfRows) {
         String fileName = "data/" + rowNumberComboBox.getValue().toString();
-        reader.readCsv(fileName, aliasAttributes, aliasTypes, aliases, directors, episodeBelongsTo, hadRole, knownFor, nameWorkedAs,
+        reader.readCsv(fileName, aliasAttributes, aliasTypes, aliases, directors,  hadRole, knownFor, nameWorkedAs,
                 names, principals, titleGenres, titleRatings, titles, writers);
         System.out.println("Odczytane z pliku\n");
         for (int i = 0; i < numberOfIternations; i++) {
@@ -191,54 +187,50 @@ public class HelloController {
                 session.persist(l);
             }
             System.out.println("NamesEntity\n");
-            for (AliasAttributesEntity l : aliasAttributes) {
-                session.persist(l);
-            }
-            System.out.println("AliasAttributesEntity\n");
-            for (AliasTypesEntity l : aliasTypes) {
-                session.persist(l);
-            }
-            System.out.println("AliasTypesEntity\n");
-            for (AliasesEntity l : aliases) {
-                session.persist(l);
-            }
-            System.out.println("AliasesEntity\n");
-            for (TitleGenresEntity g : titleGenres) {
-                session.persist(g);
-            }
-            System.out.println("TitleGenresEntity\n");
+//            for (AliasAttributesEntity l : aliasAttributes) {
+//                session.persist(l);
+//            }
+//            System.out.println("AliasAttributesEntity\n");
+//            for (AliasTypesEntity l : aliasTypes) {
+//                session.persist(l);
+//            }
+//            System.out.println("AliasTypesEntity\n");
+//            for (AliasesEntity l : aliases) {
+//                session.persist(l);
+//            }
+//            System.out.println("AliasesEntity\n");
+//            for (TitleGenresEntity g : titleGenres) {
+//                session.persist(g);
+//            }
+//            System.out.println("TitleGenresEntity\n");
             for (TitleRatingsEntity l : titleRatings) {
                 session.persist(l);
             }
             System.out.println("TitleRatingsEntity\n");
-            for (HadRoleEntity l : hadRole) {
-                session.persist(l);
-            }
-            System.out.println("HadRoleEntity\n");
-            for (NameWorkedAsEntity l : nameWorkedAs) {
-                session.persist(l);
-            }
-            System.out.println("NameWorkedAsEntity\n");
-            for (PrincipalsEntity l : principals) {
-                session.persist(l);
-            }
-            System.out.println("PrincipalsEntity\n");
-            for (KnownForEntity l : knownFor) {
-                session.persist(l);
-            }
-            System.out.println("KnownForEntity\n");
-            for (DirectorsEntity l : directors) {
-                session.persist(l);
-            }
-            System.out.println("DirectorsEntity\n");
+//            for (HadRoleEntity l : hadRole) {
+//                session.persist(l);
+//            }
+//            System.out.println("HadRoleEntity\n");
+//            for (NameWorkedAsEntity l : nameWorkedAs) {
+//                session.persist(l);
+//            }
+//            System.out.println("NameWorkedAsEntity\n");
+//            for (PrincipalsEntity l : principals) {
+//                session.persist(l);
+//            }
+//            System.out.println("PrincipalsEntity\n");
+//            for (KnownForEntity l : knownFor) {
+//                session.persist(l);
+//            }
+//            System.out.println("KnownForEntity\n");
+//            for (DirectorsEntity l : directors) {
+//                session.persist(l);
+//            }
+           // System.out.println("DirectorsEntity\n");
             for (WritersEntity l : writers) {
                 session.persist(l);
             }
             System.out.println("WritersEntity\n");
-            for (EpisodeBelongsToEntity l : episodeBelongsTo) {
-                session.persist(l);
-            }
-            System.out.println("EpisodeBelongsToEntity\n");
             System.out.println("commit\n");
             transaction.commit();
             endTime = System.currentTimeMillis();
@@ -284,21 +276,17 @@ public class HelloController {
         Transaction transaction = session.beginTransaction();
         try {
             startTime = System.currentTimeMillis();
-//            if (selectedDatabase.equals(Database.MONGODB)) {
-//                String updateQuery = "db.titles.update({}, {$set: {endYear: 2023}}, {multi: true})";
-//                session.createNativeQuery(updateQuery).executeUpdate();
-//            }
-//            else {
+            if (selectedDatabase.equals(Database.MONGODB)) {
+                String updateQuery = "db.titles.updateMany({ \"writers.names.birthYear\": { $lt: 1970 } }, { $set: { \"endYear\": 2025 } })";
+                session.createNativeQuery(updateQuery).executeUpdate();
+            }
+            else {
             session.createQuery("UPDATE pl.polsl.dbtester.entity.TitlesEntity t SET endYear = 2024\n" +
                     "WHERE t.titleId IN (\n" +
                     "    SELECT w.titleId FROM pl.polsl.dbtester.entity.WritersEntity w\n" +
                     "    JOIN pl.polsl.dbtester.entity.NamesEntity n ON w.nameId = n.nameId\n" +
                     "    WHERE n.birthYear < 1970)").executeUpdate();
-
-
-
-
-            // }
+             }
             transaction.commit();
             endTime = System.currentTimeMillis();
         } finally {

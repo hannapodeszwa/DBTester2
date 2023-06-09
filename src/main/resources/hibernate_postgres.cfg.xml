@@ -13,7 +13,6 @@
       <mapping class="pl.polsl.dbtester.entity.AliasTypesEntity"/>
       <mapping class="pl.polsl.dbtester.entity.AliasesEntity"/>
       <mapping class="pl.polsl.dbtester.entity.DirectorsEntity"/>
-      <mapping class="pl.polsl.dbtester.entity.EpisodeBelongsToEntity"/>
       <mapping class="pl.polsl.dbtester.entity.HadRoleEntity"/>
       <mapping class="pl.polsl.dbtester.entity.KnownForEntity"/>
       <mapping class="pl.polsl.dbtester.entity.NameWorkedAsEntity"/>

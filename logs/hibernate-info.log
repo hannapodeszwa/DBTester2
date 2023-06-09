@@ -1,21 +1,19 @@
-16:43:19.008 [JavaFX Application Thread] INFO  org.hibernate.Version - HHH000412: Hibernate Core {[WORKING]}
-16:43:19.011 [JavaFX Application Thread] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
-16:43:19.376 [JavaFX Application Thread] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.3.Final}
-16:43:19.664 [JavaFX Application Thread] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-16:43:19.671 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/imdb100tys]
-16:43:19.671 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
-16:43:19.671 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
-16:43:19.673 [JavaFX Application Thread] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
-16:43:20.103 [JavaFX Application Thread] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
-16:51:35.915 [JavaFX Application Thread] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener - Session Metrics {
-    719400 nanoseconds spent acquiring 1 JDBC connections;
-    377100 nanoseconds spent releasing 1 JDBC connections;
-    30087221600 nanoseconds spent preparing 2268915 JDBC statements;
-    437044917200 nanoseconds spent executing 2268915 JDBC statements;
+23:09:21.720 [JavaFX Application Thread] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+23:09:21.721 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/imdb]
+23:09:21.721 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=root}
+23:09:21.721 [JavaFX Application Thread] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+23:09:21.721 [JavaFX Application Thread] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+23:09:21.757 [JavaFX Application Thread] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+23:09:21.846 [JavaFX Application Thread] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+23:09:28.427 [JavaFX Application Thread] INFO  org.hibernate.engine.internal.StatisticalLoggingSessionEventListener - Session Metrics {
+    612300 nanoseconds spent acquiring 1 JDBC connections;
+    320800 nanoseconds spent releasing 1 JDBC connections;
+    692795700 nanoseconds spent preparing 16319 JDBC statements;
+    4472166900 nanoseconds spent executing 16319 JDBC statements;
     0 nanoseconds spent executing 0 JDBC batches;
     0 nanoseconds spent performing 0 L2C puts;
     0 nanoseconds spent performing 0 L2C hits;
     0 nanoseconds spent performing 0 L2C misses;
-    484565703000 nanoseconds spent executing 1 flushes (flushing a total of 2268915 entities and 0 collections);
-    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+    265941200 nanoseconds spent executing 1 flushes (flushing a total of 16433 entities and 146862 collections);
+    5800 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
 }

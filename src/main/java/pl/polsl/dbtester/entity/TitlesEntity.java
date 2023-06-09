@@ -40,10 +40,10 @@ public class TitlesEntity {
     private Collection<AliasesEntity> aliasesByTitleId;
     @OneToMany(mappedBy = "titlesByTitleId")
     private Collection<DirectorsEntity> directorsByTitleId;
-    @OneToOne(mappedBy = "titlesByEpisodeTitleId")
-    private EpisodeBelongsToEntity episodeBelongsToByTitleId;
-    @OneToMany(mappedBy = "titlesByParentTvShowTitleId")
-    private Collection<EpisodeBelongsToEntity> episodeBelongsTosByTitleId;
+//    @OneToOne(mappedBy = "titlesByEpisodeTitleId")
+//    private EpisodeBelongsToEntity episodeBelongsToByTitleId;
+//    @OneToMany(mappedBy = "titlesByParentTvShowTitleId")
+//    private Collection<EpisodeBelongsToEntity> episodeBelongsTosByTitleId;
     @OneToMany(mappedBy = "titlesByTitleId")
     private Collection<HadRoleEntity> hadRolesByTitleId;
     @OneToMany(mappedBy = "titlesByTitleId")
@@ -187,21 +187,21 @@ public class TitlesEntity {
         this.directorsByTitleId = directorsByTitleId;
     }
 
-    public EpisodeBelongsToEntity getEpisodeBelongsToByTitleId() {
-        return episodeBelongsToByTitleId;
-    }
+//    public EpisodeBelongsToEntity getEpisodeBelongsToByTitleId() {
+//        return episodeBelongsToByTitleId;
+//    }
 
-    public void setEpisodeBelongsToByTitleId(EpisodeBelongsToEntity episodeBelongsToByTitleId) {
-        this.episodeBelongsToByTitleId = episodeBelongsToByTitleId;
-    }
+//    public void setEpisodeBelongsToByTitleId(EpisodeBelongsToEntity episodeBelongsToByTitleId) {
+//        this.episodeBelongsToByTitleId = episodeBelongsToByTitleId;
+//    }
 
-    public Collection<EpisodeBelongsToEntity> getEpisodeBelongsTosByTitleId() {
-        return episodeBelongsTosByTitleId;
-    }
+//    public Collection<EpisodeBelongsToEntity> getEpisodeBelongsTosByTitleId() {
+//        return episodeBelongsTosByTitleId;
+//    }
 
-    public void setEpisodeBelongsTosByTitleId(Collection<EpisodeBelongsToEntity> episodeBelongsTosByTitleId) {
-        this.episodeBelongsTosByTitleId = episodeBelongsTosByTitleId;
-    }
+//    public void setEpisodeBelongsTosByTitleId(Collection<EpisodeBelongsToEntity> episodeBelongsTosByTitleId) {
+//        this.episodeBelongsTosByTitleId = episodeBelongsTosByTitleId;
+//    }
 
     public Collection<HadRoleEntity> getHadRolesByTitleId() {
         return hadRolesByTitleId;
