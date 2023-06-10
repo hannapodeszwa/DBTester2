@@ -8,8 +8,10 @@ public class Mapper {
         TitlesEntity titlesEntity = new TitlesEntity();
         titlesEntity.setTitleId(attributes[0]);
         titlesEntity.setTitleType(attributes[1]);
-        titlesEntity.setPrimaryTitle(attributes[2]);
-        titlesEntity.setOriginalTitle(attributes[3]);
+        String pt = attributes[2].replaceAll("[^\\x00-\\x7F]", "");
+        titlesEntity.setPrimaryTitle(pt);
+        String ot = attributes[3].replaceAll("[^\\x00-\\x7F]", "");
+        titlesEntity.setOriginalTitle(ot);
         titlesEntity.setIsAdult(Boolean.parseBoolean(attributes[4]));
         titlesEntity.setStartYear(toInt(attributes[5]));
         titlesEntity.setEndYear(toInt(attributes[6]));
@@ -36,18 +38,19 @@ public class Mapper {
     }
 
     public AliasesEntity createAliasesEntity(String[] attributes) {
-        String region = attributes[3];
+        String region = attributes[3].replaceAll("[^\\x00-\\x7F]", "");
         if (region.length() >= 4) {
             region = region.substring(0, 4);
         }
-        String language = attributes[4];
+        String language = attributes[4].replaceAll("[^\\x00-\\x7F]", "");
         if (language.length() >= 4) {
             language = language.substring(0, 4);
         }
         AliasesEntity aliasesEntity = new AliasesEntity();
         aliasesEntity.setTitleId(attributes[0]);
         aliasesEntity.setOrdering(toInt(attributes[1]));
-        aliasesEntity.setTitle(attributes[2]);
+        String t = attributes[2].replaceAll("[^\\x00-\\x7F]", "");
+        aliasesEntity.setTitle(t);
         aliasesEntity.setRegion(region);
         aliasesEntity.setLanguage(language);
         if (attributes.length >= 6) {
@@ -86,22 +89,13 @@ public class Mapper {
         return directorsEntity;
     }
 
-//    public EpisodeBelongsToEntity createEpisodeBelongsToEntity(String[] attributes) {
-//        EpisodeBelongsToEntity episodeBelongsToEntity = new EpisodeBelongsToEntity();
-//        episodeBelongsToEntity.setEpisodeTitleId(attributes[0]);
-//        episodeBelongsToEntity.setParentTvShowTitleId(attributes[1]);
-//        episodeBelongsToEntity.setSeasonNumber(toInt(attributes[2]));
-//        episodeBelongsToEntity.setEpisodeNumber(toInt(attributes[3]));
-//
-//        return episodeBelongsToEntity;
-//    }
-
     public HadRoleEntity createHadRoleEntity(String[] attributes) {
         HadRoleEntity hadRoleEntity = new HadRoleEntity();
         hadRoleEntity.setTitleId(attributes[0]);
         hadRoleEntity.setNameId(attributes[1]);
         if (attributes.length >= 3) {
-            hadRoleEntity.setRole(attributes[2]);
+            String r = attributes[2].replaceAll("[^\\x00-\\x7F]", "");
+            hadRoleEntity.setRole(r);
         } else {
             hadRoleEntity.setRole("");
         }
@@ -120,7 +114,8 @@ public class Mapper {
     public NamesEntity createNamesEntity(String[] attributes) {
         NamesEntity namesEntity = new NamesEntity();
         namesEntity.setNameId(attributes[0]);
-        namesEntity.setName(attributes[1]);
+        String n = attributes[1].replaceAll("[^\\x00-\\x7F]", "");
+        namesEntity.setName(n);
         namesEntity.setBirthYear(toShort(attributes[2]));
         namesEntity.setDeathYear(toShort(attributes[3]));
 
@@ -130,7 +125,8 @@ public class Mapper {
     public NameWorkedAsEntity createNameWorkedAsEntity(String[] attributes) {
         NameWorkedAsEntity nameWorkedAsEntity = new NameWorkedAsEntity();
         nameWorkedAsEntity.setNameId(attributes[0]);
-        nameWorkedAsEntity.setProfession(attributes[1]);
+        String p = attributes[1].replaceAll("[^\\x00-\\x7F]", "");
+        nameWorkedAsEntity.setProfession(p);
 
         return nameWorkedAsEntity;
     }
@@ -140,8 +136,10 @@ public class Mapper {
         principalsEntity.setTitleId(attributes[0]);
         principalsEntity.setOrdering(toByte(attributes[1]));
         principalsEntity.setNameId(attributes[2]);
-        principalsEntity.setJobCategory(attributes[3]);
-        principalsEntity.setJob(attributes[4]);
+        String jc = attributes[3].replaceAll("[^\\x00-\\x7F]", "");
+        principalsEntity.setJobCategory(jc);
+        String j = attributes[4].replaceAll("[^\\x00-\\x7F]", "");
+        principalsEntity.setJob(j);
 
         return principalsEntity;
     }

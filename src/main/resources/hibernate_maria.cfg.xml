@@ -4,15 +4,13 @@
         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <session-factory>
+        <property name="hibernate.archive.autodetection">class, hbm</property>
 
         <property name="hibernate.generate_statistics">true</property>
-        <property name="hibernate.ogm.datastore.provider">mongodb</property>
-        <property name="hibernate.ogm.datastore.database">imdbmil3</property>
-        <property name="hibernate.ogm.datastore.host">127.0.0.1</property>
-        <property name="hibernate.ogm.datastore.port">27017</property>
-        <property name="hibernate.ogm.datastore.create_database">true</property>
-
-
+        <property name="connection.url">jdbc:mariadb://localhost:3307/imdb100tys</property>
+        <property name="connection.driver_class">org.mariadb.jdbc.Driver</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">maria</property>
         <mapping class="pl.polsl.dbtester.entity.AliasAttributesEntity"/>
         <mapping class="pl.polsl.dbtester.entity.AliasTypesEntity"/>
         <mapping class="pl.polsl.dbtester.entity.AliasesEntity"/>
