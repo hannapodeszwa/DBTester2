@@ -5,20 +5,24 @@
 <hibernate-configuration>
     <session-factory>
 
-                <property name="hibernate.generate_statistics">true</property>
-                <property name="hibernate.ogm.datastore.provider">neo4j_embedded</property>
-                <property name="hibernate.ogm.datastore.url">jdbc:neo4j:bolt://localhost:7687/imdb100tys15</property>
-                <property name="hibernate.ogm.datastore.username">neo4j</property>
-                <property name="hibernate.ogm.datastore.password">neoneoneo</property>
+        <property name="hibernate.generate_statistics">true</property>
+        <property name="hibernate.ogm.datastore.provider">arangodb</property>
+        <property name="hibernate.ogm.datastore.host">localhost</property>
+        <property name="hibernate.ogm.datastore.port">8529</property>
+        <property name="hibernate.ogm.datastore.database">imdb</property>
+        <property name="hibernate.ogm.datastore.username">root</property>
+        <property name="hibernate.ogm.datastore.password">arango</property>
 
-<!--        <property name="hibernate.ogm.datastore.provider">neo4j_embedded</property>-->
-<!--        <property name="hibernate.ogm.neo4j.database.bolt_uri">bolt://localhost:7687</property>-->
-<!--        <property name="hibernate.ogm.neo4j.database.username">neo4j</property>-->
-<!--        <property name="hibernate.ogm.neo4j.database.password">neoneoneo</property>-->
-<!--        <property name="hibernate.ogm.datastore.database">abc</property>-->
+        <!-- Klasa sterownika ArangoDB -->
+        <property name="hibernate.ogm.arangodb.driver">com.arangodb.velocypack.VPackDriver</property>
 
-  <property name="hibernate.ogm.neo4j.database_path">C:/Users/hanna/.Neo4jDesktop/relate-data/dbmss/dbms-e53946f9-87ef-4820-a478-d9bf74bb5dcb/data/databases</property>
-                <property name="hibernate.ogm.neo4j.database">imdb100tys15</property>
+        <!-- Dialekt ArangoDB -->
+        <property name="hibernate.ogm.dialect">org.hibernate.ogm.dialect.ArangoDBDialect</property>
+
+            <!-- Inne ustawienia -->
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+
 
         <mapping class="pl.polsl.dbtester.entity.AliasAttributesEntity"/>
         <mapping class="pl.polsl.dbtester.entity.AliasTypesEntity"/>

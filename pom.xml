@@ -65,7 +65,7 @@
         <dependency>
             <groupId>org.neo4j.driver</groupId>
             <artifactId>neo4j-java-driver</artifactId>
-            <version>5.7.0</version>
+            <version>5.9.0</version>
         </dependency>
         <dependency>
             <groupId>org.neo4j</groupId>
@@ -73,8 +73,41 @@
             <version>5.0.0</version>
         </dependency>
 
-
-
+<!--        <dependency>-->
+<!--            <groupId>com.arangodb</groupId>-->
+<!--            <artifactId>arangodb-java-driver</artifactId>-->
+<!--            <version>v6.16.0</version>-->
+<!--        </dependency>-->
+<!--&lt;!&ndash;        <dependency>&ndash;&gt;-->
+<!--&lt;!&ndash;            <groupId>org.hibernate.ogm</groupId>&ndash;&gt;-->
+<!--&lt;!&ndash;            <artifactId>hibernate-ogm-arangodb</artifactId>&ndash;&gt;-->
+<!--&lt;!&ndash;            <version>VERSION</version>&ndash;&gt;-->
+<!--&lt;!&ndash;        </dependency>&ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.hibernate.ogm</groupId>-->
+<!--            <artifactId>hibernate-ogm-cassandra</artifactId>-->
+<!--            <version>5.1.0.Final</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.apache.cassandra</groupId>-->
+<!--            <artifactId>cassandra-all</artifactId>-->
+<!--            <version>4.1.2</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.hibernate.ogm</groupId>-->
+<!--            <artifactId>hibernate-ogm-ignite</artifactId>-->
+<!--            <version>5.3.1.Final</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.apache.ignite</groupId>-->
+<!--            <artifactId>ignite-core</artifactId>-->
+<!--            <version>2.15.0</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.hibernate</groupId>-->
+<!--            <artifactId>hibernate-search-orm</artifactId>-->
+<!--            <version>5.11.12.Final</version>-->
+<!--        </dependency>-->
 
 
         <dependency>

@@ -1,0 +1,5 @@
+<ignite xmlns="http://ignite.apache.org/schema/dml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://ignite.apache.org/schema/dml http://ignite.apache.org/schema/dml/ignite-2.15.0.xsd">
+    <!-- Konfiguracja klastra Apache Ignite -->
+</ignite>
+

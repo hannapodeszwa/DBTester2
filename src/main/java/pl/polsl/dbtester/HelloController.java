@@ -3,7 +3,13 @@ package pl.polsl.dbtester;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import org.hibernate.engine.jdbc.connections.spi.ConnectionProvider;
+import org.hibernate.engine.jdbc.spi.JdbcServices;
+import org.hibernate.engine.spi.SessionFactoryImplementor;
+import org.hibernate.internal.SessionFactoryImpl;
+import org.hibernate.query.NativeQuery;
 import org.hibernate.query.Query;
+import org.hibernate.service.spi.ServiceRegistryImplementor;
 import org.w3c.dom.Document;
 import pl.polsl.dbtester.entity.*;
 import org.hibernate.Session;
@@ -13,6 +19,9 @@ import org.hibernate.cfg.Configuration;
 import pl.polsl.dbtester.model.CsvReader;
 
 import java.io.*;
+import java.sql.Connection;
+import java.sql.DatabaseMetaData;
+import java.sql.SQLException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -60,7 +69,9 @@ public class HelloController {
         POSTGRESQL,
         MONGODB,
         MARIADB,
-        NEO
+        NEO,
+        ARANGO,
+        IGNITE
     }
 
     enum Operation {
@@ -190,50 +201,50 @@ public class HelloController {
                 session.persist(l);
             }
             System.out.println("NamesEntity\n");
-            for (AliasAttributesEntity l : aliasAttributes) {
-                session.persist(l);
-            }
-            System.out.println("AliasAttributesEntity\n");
-            for (AliasTypesEntity l : aliasTypes) {
-                session.persist(l);
-            }
-            System.out.println("AliasTypesEntity\n");
-            for (AliasesEntity l : aliases) {
-                session.persist(l);
-            }
-            System.out.println("AliasesEntity\n");
-            for (TitleGenresEntity g : titleGenres) {
-                session.persist(g);
-            }
-            System.out.println("TitleGenresEntity\n");
+//            for (AliasAttributesEntity l : aliasAttributes) {
+//                session.persist(l);
+//            }
+//            System.out.println("AliasAttributesEntity\n");
+//            for (AliasTypesEntity l : aliasTypes) {
+//                session.persist(l);
+//            }
+//            System.out.println("AliasTypesEntity\n");
+//            for (AliasesEntity l : aliases) {
+//                session.persist(l);
+//            }
+//            System.out.println("AliasesEntity\n");
+//            for (TitleGenresEntity g : titleGenres) {
+//                session.persist(g);
+//            }
+//            System.out.println("TitleGenresEntity\n");
             for (TitleRatingsEntity l : titleRatings) {
                 session.persist(l);
             }
             System.out.println("TitleRatingsEntity\n");
-            for (HadRoleEntity l : hadRole) {
-                session.persist(l);
-            }
-            System.out.println("HadRoleEntity\n");
-            for (NameWorkedAsEntity l : nameWorkedAs) {
-                session.persist(l);
-            }
-            System.out.println("NameWorkedAsEntity\n");
-            for (PrincipalsEntity l : principals) {
-                session.persist(l);
-            }
-            System.out.println("PrincipalsEntity\n");
-            for (KnownForEntity l : knownFor) {
-                session.persist(l);
-            }
-            System.out.println("KnownForEntity\n");
-            for (DirectorsEntity l : directors) {
-                session.persist(l);
-            }
-            System.out.println("DirectorsEntity\n");
-            for (WritersEntity l : writers) {
-                session.persist(l);
-            }
-            System.out.println("WritersEntity\n");
+//            for (HadRoleEntity l : hadRole) {
+//                session.persist(l);
+//            }
+//            System.out.println("HadRoleEntity\n");
+//            for (NameWorkedAsEntity l : nameWorkedAs) {
+//                session.persist(l);
+//            }
+//            System.out.println("NameWorkedAsEntity\n");
+//            for (PrincipalsEntity l : principals) {
+//                session.persist(l);
+//            }
+//            System.out.println("PrincipalsEntity\n");
+//            for (KnownForEntity l : knownFor) {
+//                session.persist(l);
+//            }
+//            System.out.println("KnownForEntity\n");
+//            for (DirectorsEntity l : directors) {
+//                session.persist(l);
+//            }
+//            System.out.println("DirectorsEntity\n");
+//            for (WritersEntity l : writers) {
+//                session.persist(l);
+//            }
+//            System.out.println("WritersEntity\n");
             System.out.println("commit\n");
             transaction.commit();
             endTime = System.currentTimeMillis();
@@ -255,7 +266,7 @@ public class HelloController {
         Transaction transaction = session.beginTransaction();
         try {
             startTime = System.currentTimeMillis();
-            if (selectedDatabase.equals(Database.MONGODB)) {
+            if (selectedDatabase.equals(Database.MONGODB) || selectedDatabase.equals(Database.NEO)) {
                 List<TitlesEntity> titles = session.createQuery("FROM TitlesEntity", TitlesEntity.class).getResultList();
                 rows = titles.size();
                 for (TitlesEntity title : titles) {
@@ -284,7 +295,7 @@ public class HelloController {
         Transaction transaction = session.beginTransaction();
         try {
             startTime = System.currentTimeMillis();
-            if (selectedDatabase.equals(Database.MONGODB)) {
+            if (selectedDatabase.equals(Database.MONGODB) || selectedDatabase.equals(Database.NEO))  {
 
                 List<String> ratings = session.createQuery("SELECT r.titleId FROM TitleRatingsEntity r WHERE averageRating > 8", String.class).getResultList();
                 List<TitlesEntity> titles = new ArrayList<>();
@@ -384,7 +395,7 @@ public class HelloController {
         Transaction transaction = session.beginTransaction();
         try {
             startTime = System.currentTimeMillis();
-            if (selectedDatabase.equals(Database.MONGODB)) {
+            if (selectedDatabase.equals(Database.MONGODB) || selectedDatabase.equals(Database.NEO)) {
 
                row =  session.createQuery("FROM pl.polsl.dbtester.entity.TitlesEntity ORDER BY startYear", TitlesEntity.class).getResultList().size();
             } else {
@@ -408,7 +419,14 @@ public class HelloController {
         long endTime = 0L;
         Transaction transaction = session.beginTransaction();
         try {
-            if (databaseComboBox.getValue().equals(Database.MONGODB)) {
+            if ( databaseComboBox.getValue().equals(Database.NEO)) {
+                String cypherQuery = "MATCH (n) DETACH DELETE n";
+                NativeQuery<?> query = session.createNativeQuery(cypherQuery);
+
+                // Wykonanie zapytania
+                query.executeUpdate();
+            }
+            else if (databaseComboBox.getValue().equals(Database.MONGODB)) {
                 startTime = System.currentTimeMillis();
                 session.createNativeQuery("db.imdb.title_genres.remove({})").executeUpdate();
                 session.createNativeQuery("db.imdb.title_ratings.remove({})").executeUpdate();
@@ -500,11 +518,36 @@ public class HelloController {
                 file = "hibernate_neo.cfg.xml";
                 break;
             }
+            case ARANGO: {
+                file = "hibernate_arango.cfg.xml";
+                break;
+            }
+            case IGNITE: {
+                file = "hibernate_ignite.cfg.xml";
+                break;
+            }
 
         }
         config = new Configuration().configure(file);
         sessionFactory = config.buildSessionFactory();
         session = sessionFactory.openSession();
+
+
+        SessionFactoryImplementor sessionFactoryImplementor = (SessionFactoryImplementor) sessionFactory;
+
+        // Pobieranie implementacji ServiceRegistry
+        ServiceRegistryImplementor serviceRegistryImplementor = sessionFactoryImplementor.getServiceRegistry();
+        try (Connection connection = serviceRegistryImplementor.getService(ConnectionProvider.class).getConnection()) {
+            // Pobieranie metadanych bazy danych
+            DatabaseMetaData databaseMetaData = connection.getMetaData();
+            System.out.println("Database Settings:");
+            System.out.println("URL: " + databaseMetaData.getURL());
+            System.out.println("Username: " + databaseMetaData.getUserName());
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+
     }
 
     void statisticToCsv(Operation operation) {
