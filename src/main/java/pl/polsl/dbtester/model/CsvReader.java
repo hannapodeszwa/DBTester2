@@ -26,20 +26,20 @@ public class CsvReader {
                         List<TitlesEntity> titles,
                         List<WritersEntity> writers ) {
 
-        readAliasAttributes(fileName, aliasAttributes);
-        readAliasTypes(fileName, aliasTypes);
+       // readAliasAttributes(fileName, aliasAttributes);
+       // readAliasTypes(fileName, aliasTypes);
         readAliases(fileName, aliases);
         readDirectors(fileName, directors);
         //readEpisodeBelongsTo(fileName, episodeBelongsTo);
-        readHadRole(fileName, hadRole);
-        readKnownFor(fileName, knownFor);
-        readNameWorkedAsEntity(fileName, nameWorkedAs);
+        //readHadRole(fileName, hadRole);
+       // readKnownFor(fileName, knownFor);
+       // readNameWorkedAsEntity(fileName, nameWorkedAs);
         readNamesEntity(fileName, names);
-        readPrincipalsEntity(fileName, principals);
+        //readPrincipalsEntity(fileName, principals);
         readWritersEntity(fileName, writers);
 
         readTitles(fileName, titles);
-        readGenres(fileName, titleGenres);
+       // readGenres(fileName, titleGenres);
         readRatings(fileName, titleRatings);
 
 
